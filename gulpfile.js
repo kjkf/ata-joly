@@ -12,7 +12,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
-const svgSprite=require('gulp-svg-sprite')
+const svgSprite=require('gulp-svg-sprite');
 
 const reload = browserSync.reload;
 sass.compiler = require('node-sass');
@@ -31,6 +31,12 @@ task('copy:favicon', () => {
   return src('src/*.ico')
       .pipe(dest('dist'))
       .pipe(reload({ stream: true }));
+});
+
+task('copy:css', () => {
+    return src('src/css/*.css')
+        .pipe(dest('dist/css'))
+        .pipe(reload({ stream: true }));
 });
 
 
@@ -117,7 +123,8 @@ watch('./src/sass/**/*.sass', series("styles"));
 watch('./src/js/**/*.js', series("scripts"));
 watch('./src/*.html', series("copy:html"));
 watch('./src/*.ico', series("copy:favicon"));
+watch('./src/css/*.css', series("copy:css"));
 watch('./src/fonts/**/*.*', series("copy:fonts"));
 watch('./src/images/icons/*.svg', series("icons"));
 
-task("default", series('clean', parallel('copy:html', 'copy:favicon', 'copy:fonts', 'copy:images', 'styles', 'icons', 'scripts'), 'server'));
+task("default", series('clean', parallel('copy:html', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:css', 'styles', 'icons', 'scripts'), 'server'));
