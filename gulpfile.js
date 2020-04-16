@@ -62,7 +62,7 @@ task('styles', () => {
         .pipe(concat('styles.min.sass'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(px2rem())
+        //.pipe(px2rem())
         .pipe(autoprefixer({
             cascade: false
         }))
