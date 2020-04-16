@@ -1,0 +1,13 @@
+node_modules
+dist
+.idea/
+*.iml
+out
+build
+gradle
+package-lock.json
+.gitignore
+.gradle
+*.env
+*.xml
+.gitignore
