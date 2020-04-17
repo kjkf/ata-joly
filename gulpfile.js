@@ -12,7 +12,7 @@ const sourcemaps = require('gulp-sourcemaps');
 const babel = require('gulp-babel');
 const uglify = require('gulp-uglify');
 const svgo = require('gulp-svgo');
-const svgSprite=require('gulp-svg-sprite')
+const svgSprite=require('gulp-svg-sprite');
 
 const reload = browserSync.reload;
 sass.compiler = require('node-sass');
@@ -33,6 +33,12 @@ task('copy:favicon', () => {
       .pipe(reload({ stream: true }));
 });
 
+task('copy:css', () => {
+    return src('src/css/*.css')
+        .pipe(dest('dist/css'))
+        .pipe(reload({ stream: true }));
+});
+
 
 task('copy:fonts', () => {
   return src('src/fonts/**/*.*')
@@ -46,6 +52,12 @@ task('copy:images', () => {
       .pipe(reload({ stream: true }));
 });
 
+task('copy:icons', () => {
+    return src('src/images/icons/*.*')
+        .pipe(dest('dist/images/icons'))
+        .pipe(reload({ stream: true }));
+});
+
 const styles = [
     'src/sass/styles.sass'
 ];
@@ -56,7 +68,7 @@ task('styles', () => {
         .pipe(concat('styles.min.sass'))
         .pipe(sassGlob())
         .pipe(sass().on('error', sass.logError))
-        .pipe(px2rem())
+        //.pipe(px2rem())
         .pipe(autoprefixer({
             cascade: false
         }))
@@ -68,7 +80,7 @@ task('styles', () => {
 });
 
 task('icons', () => {
-    return src('src/images/icons/*.svg')
+    return src('src/images/icons/sprite/*.svg')
         .pipe(
             svgo({
                 plugins: [
@@ -113,11 +125,19 @@ task('server', () => {
     });
 });
 
+task('copy:html', () => {
+    return src('src/*.html')
+        .pipe(dest('dist'))
+        .pipe(reload({ stream: true }));
+});
+
 watch('./src/sass/**/*.sass', series("styles"));
 watch('./src/js/**/*.js', series("scripts"));
 watch('./src/*.html', series("copy:html"));
 watch('./src/*.ico', series("copy:favicon"));
+watch('./src/css/*.css', series("copy:css"));
 watch('./src/fonts/**/*.*', series("copy:fonts"));
-watch('./src/images/icons/*.svg', series("icons"));
+watch('./src/images/icons/*.*', series("copy:fonts"));
+watch('./src/images/icons/sprite/*.svg', series("icons"));
 
-task("default", series('clean', parallel('copy:html', 'copy:favicon', 'copy:fonts', 'copy:images', 'styles', 'icons', 'scripts'), 'server'));
+task("default", series('clean', parallel('copy:html', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'styles', 'icons', 'scripts'), 'server'));
