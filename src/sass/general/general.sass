@@ -3,12 +3,12 @@
 		outline: none !important
 
 html
-	overflow: hidden
+	//overflow: hidden
 	font-size: $fontSize_body
 
 body
 	font:
-		family: $fontXX
+		family: $font_KZPFDinTextCompProRegular
 		size: 1rem
 		weight: 400
 	color: $fontColorMain
@@ -22,6 +22,9 @@ body
 a
 	text-decoration: none
 
+p
+	margin: 0px
+
 h1
 	font-size: $fontSize_h1
 	line-height: $lineHeight_h1
@@ -32,7 +35,8 @@ h2
 
 .title
 	margin: 0px
-	color: $grey
+	color: $blue-dark
+	text-align: center
 
 .bg--blue
 	background-color: $blue-dark
@@ -42,22 +46,153 @@ h2
 
 .container
 	background-color: transparent
-
-.header
-	background-color: transparent
-
-.test
-	display: inline-block
-	background-color: red
-	margin-bottom: 20px auto
-	width: 200px
-	height: 200px
-	border-radius: 20px
-	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75)
-	transform: rotate(50deg)
 	display: flex
+	justify-content: center
+	align-items: center
+	flex-direction: column
+	padding-left: 0px
+	padding-right: 0px
 
-.banner
-	height: 500px
-	width: 100%
-	background: url("../images/content/banner_bg.png")
+.social-menu
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-self: flex-start
+	margin: 0px
+	padding: 0px
+	&__item
+		display: inline-block
+		list-style: none
+		width: 30px
+		height: 30px
+		border-radius: 50%
+		background-color: green
+		margin-right: 20px
+		&:last-child
+			margin-right: 0px
+		a
+			display: inline-flex
+
+	.telegram
+	.youtube
+	.twitter
+	.fb
+
+
+.logo
+	display: inline-flex
+	justify-content: center
+	align-items: center
+	width: $logo_width
+	height: $logo_height
+	border-radius: 50%
+	background-color: $blue-dark
+	padding: 14px
+	+phone
+		width: $logo_width_mob
+		height: $logo_height_mob
+	a
+		display: inline-block
+		width: 100%
+		height: 100%
+		background:
+			image: url("../images/content/logo_white.svg")
+			repeat: no-repeat
+			size: contain
+			position: bottom center
+
+.search
+	display: flex
+	width: $width_search
+	position: relative
+	&:before
+		content: ''
+		position: absolute
+		top: calc( (#{$height_search} - #{$height_search_ic}) / 2)
+		left: $left_search_ic
+		width: $width_search_ic
+		height: $height_search_ic
+		background:
+			color: transparent
+			image: url("../images/icons/icon_search.svg")
+			repeat: no-repeat
+			size: contain
+		+laptop
+			top: calc( (#{$height_search_lapt} - #{$height_search_ic}) / 2)
+	+laptop
+		width: $width_search_lapt
+	&__field
+		width: 100%
+		min-height: $height_search
+		border-radius: 10px
+		border: 0px
+		background-color: #FFFFFF
+		font-size: 24px
+		font-family: $font_KZPFDinTextCompProRegular
+		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + #{$width_search_ic})
+		+laptop
+			font-size: 0.5rem
+			min-height: $height_search_lapt
+
+		+placeholder
+			color: $grey1
+.lang-menu
+	display: flex
+	flex-direction: row
+	justify-content: center
+	align-self: flex-start
+	margin: 0px
+	padding: 0px
+	font-size: $fontSize_lang
+	line-height: $lineHeight_lang
+	border-radius: $rad_lang
+	border: 2px solid #FFFFFF
+	padding: 5px 0px
+	&__item
+		display: inline-flex
+		justify-content: center
+		align-items: center
+		list-style: none
+		width: $width_lang_item
+		min-height: $height_lang_item
+		border-right: 0.3px solid $borderColor_lang
+		&:last-child
+			margin-right: 0px
+			border-right: 0px
+		a
+			display: inline-block
+			text-transform: uppercase
+			color: $grey-light
+		&:hover
+			a
+				text-shadow: $shadow_hover
+
+.text-center
+	text-align: center
+
+.m-0
+	margin: 0px
+
+.btn
+	height: auto
+	min-height: $btn-h
+	display: inline-block
+	font-family: $font_KZPFDinTextCompProRegular
+	font-size: $btn-fs
+	line-height: $btn-lh
+	color: $btn-color
+	text-transform: uppercase
+	text-align: center
+	vertical-align: middle
+	cursor: pointer
+	user-select: none
+	border: $btn-border-width solid transparent
+	border-radius: $btn-border-rad
+	padding: 0px 14px
+	background: $blue-dark
+	box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25)
+	//padding: $btn-pt 0px $btn-pb
+
+
+.flex
+	display: flex

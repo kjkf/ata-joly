@@ -1,0 +1,37 @@
+
+.books
+  font-size: $fontSize_books
+  line-height: $lineHeight_books
+  .container
+    padding: 50px 0px 125px
+  .title
+    margin-bottom: 20px
+  &__descr
+    text-align: center
+    margin-bottom: 20px
+
+.books-menu
+  display: flex
+  flex-direction: column
+  flex-wrap: wrap
+  height: 580px
+  width: 100%
+  &__item
+    margin-left: $width_books_item
+    margin-bottom: 15px
+    margin-right: 44px
+    a
+      color: inherit
+      position: relative
+      line-height: 36px
+      &:before
+        content: ''
+        position: absolute
+        left: calc(-#{$width_books_item} - 40px)
+        top: 0px
+        width: $width_books_item
+        height: $height_books_item
+        background:
+          image: url("../images/icons/icon_book_opened.svg")
+          repeat: no-repeat
+          size: contain
