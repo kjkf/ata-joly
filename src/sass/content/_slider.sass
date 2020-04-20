@@ -1,27 +1,34 @@
 .freq-books .container
-  padding: 90px 0
+  padding-top: 90px
+  padding-bottom: 90px
 .slider-main-wrapper
   display: flex
   justify-content: space-between
   align-items: center
+  width: 100%
 
   .slider__col
     height: 560px
-    width: 620px
+    width: 41%
     background: #ffffff
     font-size: 30px
     line-height: 36px
     color: rgba(0, 0, 0, 0.8)
+    +tablet
+      font-size: 20px
+      line-height: 24px
 
     &:first-child
       margin-right: 15px
-      width: 875px
+      width: 58%
       & .slider-indicators-list
         overflow-y: auto
         height: 90%
         padding: 32px 10px 10px
         list-style: none
         margin: 0
+        +tablet
+          padding-top: 14px
         & .slider-indicators-item
           margin-bottom: 13px
           border-bottom:  0.3px solid #1D6390
@@ -40,6 +47,8 @@
               image: url("../images/icons/icon_book_lb.svg")
               repeat: no-repeat
               size: contain
+            +tablet
+              top: -5px
           &:hover
             cursor: pointer
 
@@ -56,6 +65,8 @@
   color: #fff
   text-transform: uppercase
   font-weight: 400
+  +tablet
+    font-size: 30px
 
 .slider 
   position: relative
