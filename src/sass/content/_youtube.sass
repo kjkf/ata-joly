@@ -1,4 +1,4 @@
-.youtube 
+.youtube-video
   background-position: center
   background-repeat: no-repeat
   position: relative
@@ -6,6 +6,14 @@
   overflow: hidden
   transition: all 200ms ease-out
   cursor: pointer
+  width: 671px
+  height: 416px
+  +large-down
+    width: 370px
+    height: 230px
+  +laptop-down
+    width: 300px
+    height: 186px
 
   &:hover .play
     background-position: 0 0
@@ -25,4 +33,12 @@
     bottom: 0
     margin: auto
 
-
+.youtube-frame
+  width: 671px
+  height: 416px
+  +large-down
+    width: 370px
+    height: 230px
+  +laptop-down
+    width: 300px
+    height: 186px

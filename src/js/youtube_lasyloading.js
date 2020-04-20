@@ -13,9 +13,9 @@
                     if(re.test(els[i].className))a.push(els[i]);
                 return a;
             };
-            var videos = getElementsByClassName(document.body,"youtube");
+            var videos = getElementsByClassName(document.body,"youtube-video");
         } else {
-            var videos = document.getElementsByClassName("youtube");
+            var videos = document.getElementsByClassName("youtube-video");
         }
         console.log(videos);
         var nb_videos = videos.length;
@@ -33,9 +33,10 @@
                 if (this.getAttribute("data-params")) iframe_url+='&'+this.getAttribute("data-params");
                 iframe.setAttribute("src",iframe_url);
                 iframe.setAttribute("frameborder",'0');
+                iframe.className = 'youtube-frame';
                 // Высота и ширина iFrame будет как у элемента-родителя
-                iframe.style.width  = this.style.width;
-                iframe.style.height = this.style.height;
+                /*iframe.style.width  = this.style.width;
+                iframe.style.height = this.style.height;*/
                 // Заменяем начальное изображение (постер) на iFrame
                 this.parentNode.replaceChild(iframe, this);
             }

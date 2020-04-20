@@ -7,7 +7,7 @@
     flex-direction: column
 
   .section__col
-    width: 50%
+    width: 49%
     height: 560px
     background: #ffffff
     font-size: 30px
@@ -30,18 +30,19 @@
         margin-bottom: 50px
       & .section-info-list
         overflow-y: auto
-        height: 89%
-        padding: 32px 10px 10px
+        height: 100%
+        padding: 0
         list-style: none
         margin: 0
         +large-down
-          padding-top: 14px
-          height: 84%
+          //padding-top: 14px
+          //height: 100%
 
         & .section-info-item
           margin-bottom: 13px
           border-bottom:  0.3px solid #1D6390
           padding-left: 92px
+          padding-bottom: 2px
           position: relative
           +large-down
             padding-left: 65px
@@ -86,4 +87,10 @@
     +laptop-down
       font-size: 24px
       line-height: 29px
+  & .section-info
+    height: 89%
+    padding: 34px 10px
+    +large-down
+      height: 85%
+      padding: 14px 10px
 
