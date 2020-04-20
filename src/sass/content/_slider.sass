@@ -1,79 +1,6 @@
-.freq-books .container
-  padding-top: 90px
-  padding-bottom: 90px
-.slider-main-wrapper
-  display: flex
-  justify-content: space-between
-  align-items: center
-  width: 100%
-  +laptop-down
-    flex-direction: column
-
-  .slider__col
-    height: 560px
-    width: 41%
-    background: #ffffff
-    font-size: 30px
-    line-height: 36px
-    color: rgba(0, 0, 0, 0.8)
-    +large-down
-      font-size: 20px
-      line-height: 24px
-      height: 360px
-
-    +laptop-down
-      width: 100%
-
-    &:first-child
-      margin-right: 15px
-      width: 58%
-      +laptop-down
-        width: 100%
-        margin-right: 0
-        margin-bottom: 50px
-      & .slider-indicators-list
-        overflow-y: auto
-        height: 89%
-        padding: 32px 10px 10px
-        list-style: none
-        margin: 0
-        +large-down
-          padding-top: 14px
-          height: 84%
-
-        & .slider-indicators-item
-          margin-bottom: 13px
-          border-bottom:  0.3px solid #1D6390
-          padding-left: 92px
-          position: relative
-          +large-down
-            padding-left: 65px
-          +laptop-down
-            padding-left: 27px
-          &:before
-            position: absolute
-            content: ''
-            display: inline-block
-            width: 50px
-            height: 50px
-            left: 20px
-            top: 15px
-            background:
-              color: transparent
-              image: url("../images/icons/icon_book_lb.svg")
-              repeat: no-repeat
-              size: contain
-            +large-down
-              top: 5px
-              left: 12px
-              width: 35px
-              height: 35px
-            +laptop-down
-              width: 15px
-              height: 15px
-              left: 5px
-          &:hover
-            cursor: pointer
+.footer
+  height: 100px
+  background: yellow //удалить!!!!!!!!!!!!!!
 
 .slider-content
   padding: 83px 42px 83px 36px
@@ -81,24 +8,9 @@
   +large-down
     padding: 43px 42px 43px 36px
 
-.slider__col-title
-  margin: 0
-  width: 100%
-  background: #4aa7e1
-  font-size: 36px
-  padding: 12px 20px
-  color: #fff
-  text-transform: uppercase
-  font-weight: 400
-  +large-down
-    font-size: 30px
-    padding: 10px
-    line-height: 36px
-
-.slider 
+.slider
   position: relative
   overflow: hidden
-
 
 .slider__wrapper
   display: flex
@@ -119,7 +31,8 @@
     +large-down
       height: 194px
     +laptop-down
-      height: auto
+      //height: auto
+      width: 104px
       margin-right: 0
       margin-bottom: 20px
     & img

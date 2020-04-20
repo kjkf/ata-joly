@@ -3,12 +3,12 @@
     var ataJolySlider = (function () {
         return function (selector) {
             var
-                _mainWrapper = document.querySelector(selector),
-                //_mainElement = document.querySelector(selector), // основный элемент блока
-                _indicatorItems = _mainWrapper.querySelectorAll('.slider-indicators-item'),
-                _sliderWrapper = _mainWrapper.querySelector('.slider__wrapper'), // обертка для .slider-item
-                _sliderItems = _mainWrapper.querySelectorAll('.slider__item'), // элементы (.slider-item)
-                _sliderContent = _mainWrapper.querySelector('.slider-content'),
+                //_mainWrapper = document.querySelector(selector),
+                _mainElement = document.querySelector(selector), // основный элемент блока
+                //_indicatorItems = _mainElement.querySelectorAll('.slider-indicators-item'),
+                _sliderWrapper = _mainElement.querySelector('.slider__wrapper'), // обертка для .slider-item
+                _sliderItems = _mainElement.querySelectorAll('.slider__item'), // элементы (.slider-item)
+                _sliderContent = _mainElement.closest('.slider-content'),
                 _sliderControls = _sliderContent.querySelectorAll('.slider__control'), // элементы управления
                 _wrapperWidth = parseFloat(getComputedStyle(_sliderWrapper).width), // ширина обёртки
                 _itemWidth = parseFloat(getComputedStyle(_sliderItems[0]).width), // ширина одного элемента
@@ -60,7 +60,7 @@
                 }
             };
 
-            var _indicatorClick = function (e) {
+            /*var _indicatorClick = function (e) {
                 e.preventDefault();
                 var index = parseInt(e.target.dataset.slideTo) - 1;
 
@@ -74,7 +74,7 @@
                     console.log('error');
                 }
 
-            };
+            };*/
 
             var _setUpListeners = function () {
                 // добавление к кнопкам "назад" и "вперед" обрботчика _controlClick для событя click
@@ -83,16 +83,16 @@
                 });
             };
 
-            var _setUpIndicatorsListeners = function () {
+            /*var _setUpIndicatorsListeners = function () {
                 // добавление к названиям книг обрботчика _indicatorClick для событя click
                 _indicatorItems.forEach(function (item) {
                     item.addEventListener('click', _indicatorClick);
                 });
-            };
+            };*/
 
             // инициализация
             _setUpListeners();
-            _setUpIndicatorsListeners();
+            //_setUpIndicatorsListeners();
 
             return {
                 right: function () { // метод right
@@ -105,5 +105,6 @@
 
         }
     }());
-    ataJolySlider('.books-slider.slider-main-wrapper');
+    ataJolySlider('#booksSlider');
+    ataJolySlider('#videoSlider');
 })();

@@ -1,0 +1,89 @@
+.section-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  +laptop-down
+    flex-direction: column
+
+  .section__col
+    width: 50%
+    height: 560px
+    background: #ffffff
+    font-size: 30px
+    line-height: 36px
+    color: rgba(0, 0, 0, 0.8)
+    +large-down
+      font-size: 20px
+      line-height: 24px
+      height: 360px
+
+    +laptop-down
+      width: 100%
+
+    &:first-child
+      margin-right: 15px
+
+      +laptop-down
+        width: 100%
+        margin-right: 0
+        margin-bottom: 50px
+      & .section-info-list
+        overflow-y: auto
+        height: 89%
+        padding: 32px 10px 10px
+        list-style: none
+        margin: 0
+        +large-down
+          padding-top: 14px
+          height: 84%
+
+        & .section-info-item
+          margin-bottom: 13px
+          border-bottom:  0.3px solid #1D6390
+          padding-left: 92px
+          position: relative
+          +large-down
+            padding-left: 65px
+          +laptop-down
+            padding-left: 27px
+          &:before
+            position: absolute
+            content: ''
+            display: inline-block
+            width: 50px
+            height: 50px
+            left: 20px
+            top: 15px
+            background:
+              color: transparent
+              image: url("../images/icons/icon_book_lb.svg")
+              repeat: no-repeat
+              size: contain
+            +large-down
+              top: 5px
+              left: 12px
+              width: 35px
+              height: 35px
+            +laptop-down
+              width: 15px
+              height: 15px
+              left: 5px
+
+  & .section__col-title
+    margin: 0
+    width: 100%
+    background: #4aa7e1
+    font-size: 36px
+    padding: 12px 20px
+    color: #fff
+    text-transform: uppercase
+    font-weight: 400
+    +large-down
+      font-size: 30px
+      line-height: 36px
+      padding: 10px
+    +laptop-down
+      font-size: 24px
+      line-height: 29px
+
