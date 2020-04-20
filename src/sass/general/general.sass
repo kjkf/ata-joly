@@ -13,11 +13,13 @@ body
 		weight: 400
 	color: $fontColorMain
 	line-height: 1
-	//min-width: $bodyMinWidth
+	min-width: $phone-width-min
 	margin: 0
 	padding: 0
 	height: 100vh
 	background-color: $body_bg
+	+laptop-down
+		font-size: 20px
 
 a
 	text-decoration: none
@@ -28,6 +30,8 @@ p
 h1
 	font-size: $fontSize_h1
 	line-height: $lineHeight_h1
+	+phone-down
+		font-size: 36px
 
 h2
 	font-size: $fontSize_h2
@@ -50,8 +54,38 @@ h2
 	justify-content: center
 	align-items: center
 	flex-direction: column
-	padding-left: 0px
-	padding-right: 0px
+
+	+phone
+		max-width: $phone-width
+		padding-left: 5px
+		padding-right: 5px
+		background: blue
+
+
+	+tablet
+		max-width: $tablet-width
+
+
+	+ipad
+		max-width: $ipad-width
+
+	+laptop
+		max-width: $laptop-width
+		padding-left: 35px
+		padding-right: 35px
+		background: red
+
+	+large
+		max-width: $large-width
+		padding-left: 35px
+		padding-right: 35px
+		background: blue
+
+	+extra_large
+		max-width: $extra_large-width
+		padding-left: 90px
+		padding-right: 90px
+
 
 .social-menu
 	display: flex
@@ -117,9 +151,9 @@ h2
 			image: url("../images/icons/icon_search.svg")
 			repeat: no-repeat
 			size: contain
-		+laptop
+		+laptop-down
 			top: calc( (#{$height_search_lapt} - #{$height_search_ic}) / 2)
-	+laptop
+	+laptop-down
 		width: $width_search_lapt
 	&__field
 		width: 100%
@@ -130,7 +164,7 @@ h2
 		font-size: 24px
 		font-family: $font_KZPFDinTextCompProRegular
 		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + #{$width_search_ic})
-		+laptop
+		+laptop-down
 			font-size: 0.5rem
 			min-height: $height_search_lapt
 
