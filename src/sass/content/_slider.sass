@@ -6,6 +6,8 @@
   justify-content: space-between
   align-items: center
   width: 100%
+  +laptop-down
+    flex-direction: column
 
   .slider__col
     height: 560px
@@ -14,26 +16,40 @@
     font-size: 30px
     line-height: 36px
     color: rgba(0, 0, 0, 0.8)
-    +tablet
+    +large-down
       font-size: 20px
       line-height: 24px
+      height: 360px
+
+    +laptop-down
+      width: 100%
 
     &:first-child
       margin-right: 15px
       width: 58%
+      +laptop-down
+        width: 100%
+        margin-right: 0
+        margin-bottom: 50px
       & .slider-indicators-list
         overflow-y: auto
-        height: 90%
+        height: 89%
         padding: 32px 10px 10px
         list-style: none
         margin: 0
-        +tablet
+        +large-down
           padding-top: 14px
+          height: 84%
+
         & .slider-indicators-item
           margin-bottom: 13px
           border-bottom:  0.3px solid #1D6390
           padding-left: 92px
           position: relative
+          +large-down
+            padding-left: 65px
+          +laptop-down
+            padding-left: 27px
           &:before
             position: absolute
             content: ''
@@ -47,14 +63,23 @@
               image: url("../images/icons/icon_book_lb.svg")
               repeat: no-repeat
               size: contain
-            +tablet
-              top: -5px
+            +large-down
+              top: 5px
+              left: 12px
+              width: 35px
+              height: 35px
+            +laptop-down
+              width: 15px
+              height: 15px
+              left: 5px
           &:hover
             cursor: pointer
 
 .slider-content
   padding: 83px 42px 83px 36px
   position: relative
+  +large-down
+    padding: 43px 42px 43px 36px
 
 .slider__col-title
   margin: 0
@@ -65,8 +90,10 @@
   color: #fff
   text-transform: uppercase
   font-weight: 400
-  +tablet
+  +large-down
     font-size: 30px
+    padding: 10px
+    line-height: 36px
 
 .slider 
   position: relative
@@ -76,9 +103,6 @@
 .slider__wrapper
   display: flex
   transition: transform 0.6s ease
-  //width: 10000px
-  //flex-wrap: nowrap
-
 
 .slider__item
   flex: 0 0 100%
@@ -86,11 +110,18 @@
   display: flex
   justify-content: space-between
   align-items: center
-  //width: 543px
+  +laptop-down
+    flex-direction: column
+    text-align: center
   & .item-img
-    //width: 250px
     height: 345px
     margin-right: 15px
+    +large-down
+      height: 194px
+    +laptop-down
+      height: auto
+      margin-right: 0
+      margin-bottom: 20px
     & img
       width: 100%
       height: 100%
@@ -99,6 +130,9 @@
   position: absolute
   top: -45px
   right: 23px
+  +large-down
+    top: -40px
+    right: 10px
 
 .slider__control
   display: inline-block
