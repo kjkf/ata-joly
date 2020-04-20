@@ -11,3 +11,4 @@ package-lock.json
 *.env
 *.xml
 .gitignore
+test_footer.html
