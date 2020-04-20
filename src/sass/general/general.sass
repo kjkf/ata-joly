@@ -31,6 +31,7 @@ p
 h1
 	font-size: $fontSize_h1
 	line-height: $lineHeight_h1
+	font-weight: normal
 	+phone-down
 		font-size: 36px
 		line-height: 43px
@@ -223,6 +224,16 @@ h2
 	box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25)
 	//padding: $btn-pt 0px $btn-pb
 
+.scrolled::-webkit-scrollbar
+	width: 10px
+	height: 4px
+	background-color: rgba(229, 229, 229, 0.39)
+	border-radius: 5px
 
-.flex
-	display: flex
+.scrolled::-webkit-scrollbar-thumb
+	background-color: $scrollbar_bg
+	border-radius: 5px
+
+.scrolled
+	scrollbar-color: $scrollbar_bg rgba(229, 229, 229, 0.39)
+	scrollbar-width: thin
