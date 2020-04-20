@@ -1,0 +1,171 @@
+.footer
+  width: 100%
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  .container
+    flex-wrap: wrap
+    &__row
+      display: flex
+      flex-direction: row
+      justify-content: center
+      width: 100%
+      border-top: 0.3px solid rgba(255, 255, 255, 0.5)
+      padding: 20px 0
+      align-items: center
+      font-size: 24px
+      +laptop-down
+        flex-direction: column
+        justify-content: center
+
+  color: #ffffff
+  &-btn
+    width: 180px
+    height: 40px
+    background: #4AA7E1
+    box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25)
+    border-radius: 10px
+    border-style: none
+    color: #ffffff
+    font-family: inherit
+    font-weight: normal
+    font-size: 24px
+  &-input
+    flex-grow: 1
+    border-style: none
+    font-family: inherit
+    font-size: inherit
+    color: black
+    text-align: center
+    margin-left: 3px
+    &::placeholder
+      color: #C1BFBF
+  li
+    list-style: none
+    color: #ffffff
+    margin-bottom: 5px
+  a
+    color: #ffffff
+    text-decoration: none
+    &:hover
+      text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.9)
+.footer-subscribe
+  width: 450px
+  height: 40px
+  display: flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  background-color: #FFFFFF
+  border-radius: 10px
+  font-weight: normal
+  font-size: 24px
+  margin: 0px 85px 0px 10px
+  +large-down
+    margin-right: 20px
+  +laptop-down
+    margin: 5px 0px 10px 0px
+  .footer-btn
+    box-shadow: none
+    max-width: 140px
+    height: 38px
+    margin: 1px 1px 1px 5px
+
+.footer-menu
+  display: flex
+  flex-direction: column
+  justify-content: left
+  min-width: 250px
+  list-style: none
+  padding-right: 45px
+  padding-left: 65px
+  margin-right: 40px
+  border-right: 0.3px solid rgba(255, 255, 255, 0.5)
+  +large-down
+    min-width: 155px
+    margin: 0px
+    padding-right: 15px
+    padding-left: 0px
+    margin-right: 20px
+  a
+    font-size: 20px
+.footer-submenu
+  padding-left: 20px
+.footer-cond
+  display: flex
+  flex-grow: 1
+  flex-direction: column
+  justify-content: flex-start
+  text-align: left
+  margin-right: 60px
+  font-size: 20px
+  line-height: 25px
+  +large-down
+    margin: 0px
+  +laptop-down
+    display: none
+.footer-cond__link
+  display: inline-flex
+  &::after
+    background-image: url('../images/icons/icon_arrowLink_white.svg')
+    background-size: 15px 15px
+    size: 15px 15px
+    background-repeat: no-repeat
+    background-position: right center
+    content: ''
+
+
+  +laptop-down
+    display: inline-flex
+
+
+.footer-tags
+  display: flex
+  flex-grow: 1
+  margin-right: 40px
+  border-right: 0.3px solid rgba(255, 255, 255, 0.5)
+.tags-menu
+  display: flex
+  flex-direction: row
+  justify-content: left
+  flex-wrap: wrap
+  min-height: 135px
+  margin: 0px
+  padding-left: 65px
+  padding-right: 5px
+  +large-down
+    padding: 0
+  &__item
+    display: inline-flex
+    min-width: 300px
+    margin: 0px 10px 10px 0px
+    +large-down
+      min-width: 225px
+      margin: 0px 10px 5px 0px
+  &__link
+    font-size: 24px
+    margin-bottom: 15px
+    +large-down
+      font-size: 20px
+.footer-icons
+  min-width: 105px
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+.icn
+  width: 35px
+  height: 35px
+  margin: 0px 15px 15px 0px
+  background-size: 35px 35px
+  background-position: center center
+  &:hover
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8) //некорректно работает
+  &__telegram
+    background-image: url('../images/icons/icon_telegram.png')
+  &__fb
+    background-image: url('../images/icons/icon_fb.png')
+  &__tw
+    background-image: url('../images/icons/icon_twit.png')
+  &__yt
+    background-image: url('../images/icons/icon_youtube.png')
