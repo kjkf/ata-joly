@@ -20,6 +20,7 @@ body
 	background-color: $body_bg
 	+laptop-down
 		font-size: 20px
+		line-height: 24px
 
 a
 	text-decoration: none
@@ -32,6 +33,7 @@ h1
 	line-height: $lineHeight_h1
 	+phone-down
 		font-size: 36px
+		line-height: 43px
 
 h2
 	font-size: $fontSize_h2
@@ -57,35 +59,29 @@ h2
 
 	+phone
 		max-width: $phone-width
-		padding-left: 5px
-		padding-right: 5px
-		background: blue
-
-
 	+tablet
 		max-width: $tablet-width
-
-
 	+ipad
 		max-width: $ipad-width
-
 	+laptop
 		max-width: $laptop-width
-		padding-left: 35px
-		padding-right: 35px
-		background: red
-
 	+large
 		max-width: $large-width
-		padding-left: 35px
-		padding-right: 35px
-		background: blue
-
 	+extra_large
 		max-width: $extra_large-width
 		padding-left: 90px
 		padding-right: 90px
 
+
+	+large-down
+		padding-left: 35px
+		padding-right: 35px
+		//background: yellow
+
+	+laptop-down
+		padding-left: 5px
+		padding-right: 5px
+		//background: green
 
 .social-menu
 	display: flex
