@@ -1,0 +1,111 @@
+.freq-books .container
+  padding: 90px 0
+.slider-main-wrapper
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  .slider__col
+    height: 560px
+    width: 620px
+    background: #ffffff
+    font-size: 30px
+    line-height: 36px
+    color: rgba(0, 0, 0, 0.8)
+
+    &:first-child
+      margin-right: 15px
+      width: 875px
+      & .slider-indicators-list
+        overflow-y: auto
+        height: 90%
+        padding: 32px 10px 10px
+        list-style: none
+        margin: 0
+        & .slider-indicators-item
+          margin-bottom: 13px
+          border-bottom:  0.3px solid #1D6390
+          padding-left: 92px
+          position: relative
+          &:before
+            position: absolute
+            content: ''
+            display: inline-block
+            width: 50px
+            height: 50px
+            left: 20px
+            top: 15px
+            background:
+              color: transparent
+              image: url("../images/icons/icon_book_lb.svg")
+              repeat: no-repeat
+              size: contain
+          &:hover
+            cursor: pointer
+
+.slider-content
+  padding: 83px 42px 83px 36px
+  position: relative
+
+.slider__col-title
+  margin: 0
+  width: 100%
+  background: #4aa7e1
+  font-size: 36px
+  padding: 12px 20px
+  color: #fff
+  text-transform: uppercase
+  font-weight: 400
+
+.slider 
+  position: relative
+  overflow: hidden
+
+
+.slider__wrapper
+  display: flex
+  transition: transform 0.6s ease
+  //width: 10000px
+  //flex-wrap: nowrap
+
+
+.slider__item
+  flex: 0 0 100%
+  max-width: 100%
+  display: flex
+  justify-content: space-between
+  align-items: center
+  //width: 543px
+  & .item-img
+    //width: 250px
+    height: 345px
+    margin-right: 15px
+    & img
+      width: 100%
+      height: 100%
+
+.slider__controls
+  position: absolute
+  top: -45px
+  right: 23px
+
+.slider__control
+  display: inline-block
+  width: 27px
+  height: 27px
+  background:
+    color: rgba(255, 255, 255, 0.7)
+    image: url("../images/icons/icon_arrow.svg")
+    repeat: no-repeat
+    size: 14px
+    position: center
+  border-radius: 50%
+  &:hover
+    background:
+      color: rgba(255, 255, 255, 0.5)
+  &_left
+    transform: rotate(180deg)
+
+
+
+
