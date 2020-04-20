@@ -137,7 +137,8 @@ watch('./src/*.html', series("copy:html"));
 watch('./src/*.ico', series("copy:favicon"));
 watch('./src/css/*.css', series("copy:css"));
 watch('./src/fonts/**/*.*', series("copy:fonts"));
-watch('./src/images/icons/*.*', series("copy:fonts"));
+watch('./src/images/content/**/*.*', series("copy:images"));
+watch('./src/images/icons/*.*', series("copy:icons"));
 watch('./src/images/icons/sprite/*.svg', series("icons"));
 
 task("default", series('clean', parallel('copy:html', 'copy:favicon', 'copy:fonts', 'copy:images', 'copy:icons', 'copy:css', 'styles', 'icons', 'scripts'), 'server'));
