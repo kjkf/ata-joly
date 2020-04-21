@@ -2,22 +2,26 @@
   display: flex
   min-height: 1124px
   width: 100%
-
+  background:
+    color: transparent
+    image: url("../images/content/banner_bg.png")
+    size: 1680px
+    repeat: no-repeat
+    position: center top
 
   +large-down
-    background-size: contain
+    background-size: 1095px
+    min-height: 787px
+    background-position: center 66px
 
   .container
     padding-top: 60px
     margin-top: -120px
-    background:
-      color: transparent
-      image: url("../images/content/banner_bg.png")
-      size: 100%
-      repeat: no-repeat
-      position: center top
+    background-color: rgba(0,0,0,0.5)
+
     +large-down
       min-height: 784px
+      padding-top: 230px
 
 .main-title
   font-family: $font_KZExo2_Thin
@@ -35,6 +39,9 @@
   text-align: center
   text-transform: lowercase
   margin: 0px 0px 35px 0px
+
+  +large-down
+    margin-bottom: 45px
 
 .slogan
   font-family: $font_KZAriston

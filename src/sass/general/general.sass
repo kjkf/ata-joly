@@ -132,6 +132,7 @@ h2
 			size: contain
 			position: bottom center
 
+
 .search
 	display: flex
 	width: $width_search
@@ -167,6 +168,7 @@ h2
 
 		+placeholder
 			color: $grey1
+
 .lang-menu
 	display: flex
 	flex-direction: row
@@ -197,6 +199,12 @@ h2
 		&:hover
 			a
 				text-shadow: $shadow_hover
+
+.lang-menu.selected
+	.lang-menu__item
+		display: none
+	.lang-menu__item.active
+		display: inline-flex
 
 .text-center
 	text-align: center

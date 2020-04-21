@@ -10,10 +10,12 @@
     padding-top: 50px
     padding-bottom: 50px
   .title
-    margin-bottom: 20px
+    margin-bottom: 25px
   &__descr
     text-align: center
-    margin-bottom: 20px
+    margin-bottom: 25px
+    +large-down
+      margin-bottom: 10px
 
 .books-menu
   display: flex
@@ -21,31 +23,71 @@
   flex-wrap: wrap
   height: 580px
   width: 100%
+  margin: 0px
+  padding: 0px
+  line-height: 36px
+  list-style: none
+  counter-reset: my-awesome-counter
 
   +laptop-down
     display: none
     font-size: 16px
-    background: red
 
   +large-down
+    height: 300px
     font-size: 18px
+    line-height: 22px
+    color: red
 
 .books-menu__item
-  margin-left: $width_books_item
+  margin-left: 45px
   margin-bottom: 15px
-  margin-right: 44px
-  a
-    color: inherit
-    position: relative
-    line-height: 36px
-    &:before
-      content: ''
-      position: absolute
-      left: calc(-#{$width_books_item} - 40px)
-      top: 0px
-      width: $width_books_item
-      height: $height_books_item
-      background:
-        image: url("../images/icons/icon_book_opened.svg")
-        repeat: no-repeat
-        size: contain
+  //margin-right: 44px
+  counter-increment: my-awesome-counter
+  background-color: aqua
+
+
+  &::before
+    content: counter(my-awesome-counter) ". "
+    color: blue
+    font-weight: bold
+    margin-right: 10px
+
+  +large-down
+    margin-bottom: 5px
+    margin-left: 34px
+
+
+.books-menu__item a
+  color: inherit
+  position: relative
+  color: red
+
+  &:before
+    content: ''
+    position: absolute
+    left: calc(-#{$width_books_item} - 40px)
+    top: 0px
+    width: $width_books_item
+    height: $height_books_item
+    background:
+      color: transparent
+      image: url("../images/icons/icon_book_opened.svg")
+      repeat: no-repeat
+      size: contain
+    +large-down
+      width: 25.75px
+      height: 25px
+      left: -57px
+
+.books-menu__item:nth-child(n + 10)
+  margin-left: 40px
+  +large-down
+    margin-left: 30px
+  &::before
+    margin-right: 5px
+    +large-down
+      margin-right: 7px
+
+.books-menu__item:nth-child(n + 12)
+  margin-left: 0px
