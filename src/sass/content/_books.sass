@@ -32,9 +32,9 @@
   +laptop-down
     display: none
     font-size: 16px
-    background: red
 
   +large-down
+    height: 300px
     font-size: 18px
     line-height: 22px
     color: red
@@ -46,6 +46,7 @@
   counter-increment: my-awesome-counter
   background-color: aqua
 
+
   &::before
     content: counter(my-awesome-counter) ". "
     color: blue
@@ -54,11 +55,13 @@
 
   +large-down
     margin-bottom: 5px
+    margin-left: 34px
 
 
 .books-menu__item a
   color: inherit
   position: relative
+  color: red
 
   &:before
     content: ''
@@ -68,17 +71,23 @@
     width: $width_books_item
     height: $height_books_item
     background:
+      color: transparent
       image: url("../images/icons/icon_book_opened.svg")
       repeat: no-repeat
       size: contain
     +large-down
       width: 25.75px
       height: 25px
+      left: -57px
 
 .books-menu__item:nth-child(n + 10)
   margin-left: 40px
+  +large-down
+    margin-left: 30px
   &::before
     margin-right: 5px
+    +large-down
+      margin-right: 7px
 
 .books-menu__item:nth-child(n + 12)
   margin-left: 0px
