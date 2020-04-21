@@ -119,7 +119,7 @@ h2
 	border-radius: 50%
 	background-color: $blue-dark
 	padding: 14px
-	+phone
+	+laptop-down
 		width: $logo_width_mob
 		height: $logo_height_mob
 	a
@@ -149,10 +149,17 @@ h2
 			image: url("../images/icons/icon_search.svg")
 			repeat: no-repeat
 			size: contain
-		+laptop-down
+		+large-down
 			top: calc( (#{$height_search_lapt} - #{$height_search_ic}) / 2)
-	+laptop-down
+		+laptop-down
+			width: $width_search_ic_mob
+			height: $height_search_ic_mob
+			top: calc( (#{$height_search_mob} - #{$height_search_ic_mob}) / 2)
+
+	+large-down
 		width: $width_search_lapt
+	+laptop-down
+		width: 145px
 	&__field
 		width: 100%
 		min-height: $height_search
@@ -161,10 +168,17 @@ h2
 		background-color: #FFFFFF
 		font-size: 24px
 		font-family: $font_KZPFDinTextCompProRegular
-		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + #{$width_search_ic})
-		+laptop-down
+		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 30px)
+		+large-down
 			font-size: 0.5rem
 			min-height: $height_search_lapt
+			border-radius: 5px
+		+laptop-down
+			min-height: $height_search_mob
+			padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 15px)
+			border-radius: 8px
+
+
 
 		+placeholder
 			color: $grey1
@@ -180,7 +194,7 @@ h2
 	line-height: $lineHeight_lang
 	border-radius: $rad_lang
 	border: 2px solid #FFFFFF
-	padding: 5px 0px
+	padding: 0px
 	&__item
 		display: inline-flex
 		justify-content: center
@@ -189,6 +203,10 @@ h2
 		width: $width_lang_item
 		min-height: $height_lang_item
 		border-right: 0.3px solid $borderColor_lang
+
+		+laptop-down
+			width: 36px
+
 		&:last-child
 			margin-right: 0px
 			border-right: 0px
@@ -231,6 +249,7 @@ h2
 	background: $blue-dark
 	box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25)
 	//padding: $btn-pt 0px $btn-pb
+
 
 .scrolled::-webkit-scrollbar
 	width: 10px
