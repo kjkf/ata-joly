@@ -1,0 +1,89 @@
+$font_desktop: normal 30px  $font_KZPFDinTextCompProRegular
+$font_tablet: normal 24px  $font_KZPFDinTextCompProRegular
+$font_mobile: normal 20px  $font_KZPFDinTextCompProRegular
+
+.feedback-block
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 620px
+  height: 555px
+  margin: auto
+  index: 1
+  font: $font_desktop
+  +large-down
+    width: 500px
+    height: 478px
+    font: $font_tablet
+  +laptop-down
+    width: 310px
+    height: 400px
+    font: $font_mobile
+
+.feedback-caption
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  align-items: center
+  width: 100%
+  height: 60px
+  background: #1D6390
+  color: #ffffff
+  padding: 10px 20px
+  +large-down
+    height: 50px
+
+
+.feedback-close
+  border-style: none
+  border-radius: 50%
+  border: 2px solid #ffffff
+  min-width: 45px
+  height: 45px
+  background-color: #1D6390
+  +large-down
+    min-width: 35px
+    height: 35px
+
+.text-field
+  width: 526px
+  height: 50px
+  border-radius: 10px
+  border: 2px solid #4AA7E1
+  margin-bottom: 10px
+  text-align: left
+  padding: 8px 8px 0 8px
+  font: $font_desktop
+  color: #000000
+  &::placeholder
+    text-align: center
+    color: #C1BFBF
+    font: $font_desktop
+    +large-down
+      font: $font_tablet
+    +laptop-down
+      font: $font_mobile
+  &__area
+    height: 256px
+    +large-down
+      height: 200px
+    +laptop-down
+      height: 165px!important
+  +large-down
+    width: 420px
+    font: $font_tablet
+    padding-top: 5px
+  +laptop-down
+    width: 290px
+    height: 40px
+    font: $font_mobile
+    border: 1px solid #4AA7E1
+
+.feedback-block__content
+  display: flex
+  flex-direction: column
+  justify-content: center
+  width: 100%
+  background-color: #FFFFFF
+  padding: 20px 47px 30px 47px
+  align-items: center
