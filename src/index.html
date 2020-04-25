@@ -31,7 +31,7 @@
 		</ul>
 		<div class="header__nav">
 			<button type="button" class="btn btn-gamburg" id="btn_gamburg"></button>
-			<div class="menu-wrap">
+			<!-- <div class="menu-wrap">
 				<button type="button" class="btn btn-close" id="btn_close"></button>
 				<ul class="menu first-menu">
 					<li class="menu__item"><a href="#" class="menu__link">Басқы бет</a></li>
@@ -51,7 +51,7 @@
 					<li class="menu__item"><a href="#" class="menu__link">Тоқберген Байтасовтың блогы</a></li>
 					<li class="menu__item"><a href="#" class="menu__link">Жеке блогтар</a></li>
 				</ul>
-			</div>
+			</div> -->
 		</div>
 	</div>
 </div>
@@ -120,7 +120,8 @@
 			<li class="books-menu__item"><a href="#">Даналық негіздері</a></li>
 			<li class="books-menu__item"><a href="#">Тектілікті қалыптастыру, жаңашылдыққа қадам</a></li>
 		</ol>
-		<button type="button" class="btn">ЖАҢА КІТАПХАНА</button>
+		<button type="button" class="link books-link showinmobile" onclick='showBooks()'>Кітаптар</button>
+		<a href="#" class="link books-link">ЖАҢА КІТАПХАНА</a>
 	</div>
 </div>
 <div class="freq-books bg--blue">
@@ -382,10 +383,10 @@
 				<input class='footer-input' type="text" name="" value="" placeholder="e-mail"></input>
 				<button class="footer-btn" type="button" name="button">Жазылу</button>
 			</div>
-			<button class="footer-btn" type="button" name="button">Кері байланыс</button>
+			<button class="footer-btn" type="button" name="button" onclick="showFeedBack()">Кері байланыс</button>
 		</div>
 		<div class="container__row">
-			<button type="button" name="button" class="footer-cond__link" onclick="alert('tut')">Сайт материалдарын пайдалану шарты</button>
+			<button type="button" name="button" class="link footer-cond__link" onclick="showCond()">Сайт материалдарын пайдалану шарты</button>
 			<ul class="footer-menu">
 				<li><a href="">Басқы бет</a> </li>
 				<li><a href="">Библиотека</a></li>
@@ -438,23 +439,100 @@
 		</div>
 	</div>
 </div>
-<br>
+
+<!--                                pop-ups                              -->
+
 <div class="feedback-block">
-	<div class="feedback-caption">
+	<!-- <div class="feedback-caption">
 		<span class='section__col-title'>Кері байланыс</span>
-		<button class='feedback-close' type="button" name="button"></button>
-	</div>
+		<button class='popup-block__close' type="button" name="button" onClick="closePopup()"></button>
+	</div> -->
 	<div class="feedback-block__content">
 			<input class="text-field" type="text" name="" value="" placeholder="Введите Ваш e-mail"/>
 			<input class="text-field" type="text" name="" value="" placeholder="Введите тему Вашего обращения"/ />
 			<textarea class="text-field text-field__area" name="name" rows="8" cols="80" placeholder="Введите текст Вашего обращения"></textarea>
 			<button class="footer-btn" type="button" name="button">Отправить</button>
 	</div>
+</div>
+<div class="popup-block">
+	<div class="popup-block__caption">
+		<span class="popup-block__name"></span>
+		<button class='popup-block__close' type="button" name="button" onClick="closePopup()"></button>
+	</div>
+	<div class="popup-block__content">
 
+	</div>
 </div>
 
 
 
 <script src="main.min.js"></script>
+<script>
+	let popup = document.getElementsByClassName('popup-block') //это поп-ап
+	let popup_name = document.getElementsByClassName('popup-block__name')//наименование поп-ап
+	let popup_close = document.getElementsByClassName('popup-block__close')//кнопка закрыть
+	let popup_caption = document.getElementsByClassName('popup-block__caption')//заголовок поп-ап
+	let popup_content = document.getElementsByClassName('popup-block__content')// это содержимое поп-ап
+
+	function closePopup(){
+		if (popup[0].style.display == 'flex'){
+			if (popup_caption[0].style.display == 'flex'){
+				popup_caption[0].classList.remove('popup-block__caption-yellow');
+				popup_caption[0].classList.remove('popup-block__caption-blue');
+				popup_caption[0].style.display='none'
+			}
+			popup_content[0].classList.remove('popup-block__content-yellow');
+			popup_content[0].classList.remove('popup-block__content-blue');
+
+			popup_close[0].classList.remove('popup-block__close-white');
+			popup_close[0].classList.remove('popup-block__close-blue');
+			popup[0].style.display = 'none'
+		}
+	}
+
+	function showFeedBack(){
+		let feedback = document.getElementsByClassName('feedback-block') // это обратная связь
+		popup_name[0].innerHTML = "Кері байланыс";
+		popup_content[0].innerHTML=feedback[0].innerHTML
+
+		popup_caption[0].classList.add('popup-block__caption-blue');
+		popup_close[0].classList.add('popup-block__close-white');
+
+		popup_content[0].style.padding='0'
+		popup_caption[0].style.display='flex';
+		popup[0].style.display='flex'
+	}
+
+	function showCond(){
+		let cond = document.getElementsByClassName('footer-cond'); // это условия использования сайта
+		popup_name[0].innerHTML= "Условия";
+		popup_content[0].innerHTML="<div class='footer-cond' style='display:flex'>"+cond[0].innerHTML+"</div>";
+
+		popup_content[0].classList.add('popup-block__content-blue');
+		popup_content[0].classList.add('scrolled');
+		popup_caption[0].classList.add('popup-block__caption-blue');
+		popup_close[0].classList.add('popup-block__close-white');
+
+		popup_content[0].style.height='430px'
+		popup_caption[0].style.display='flex';
+		popup[0].style.display='flex';
+	}
+
+	function showBooks(){
+		let books = document.getElementsByClassName('books-menu'); // это условия использования сайта
+		popup_name[0].innerHTML = "Кітаптар";
+		popup_content[0].innerHTML="<ol class='books-menu' style='display:flex'>"+books[0].innerHTML+"</ol>";
+
+		popup_caption[0].classList.add('popup-block__caption-yellow');
+		popup_content[0].classList.add('popup-block__content-yellow');
+		popup_close[0].classList.add('popup-block__close-blue');
+
+		popup_caption[0].style.display='flex';
+		popup[0].style.display='flex';
+
+		console.log("popup_content[0] >>> "+ popup_content[0].innerHTML);
+		console.log("books[0].innerHTML = "+ books[0].innerHTML);
+	}
+</script>
 </body>
 </html>

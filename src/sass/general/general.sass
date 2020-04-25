@@ -73,7 +73,6 @@ h2
 		padding-left: 90px
 		padding-right: 90px
 
-
 	+large-down
 		padding-left: 35px
 		padding-right: 35px
@@ -131,7 +130,6 @@ h2
 			repeat: no-repeat
 			size: contain
 			position: bottom center
-
 
 .search
 	display: flex
@@ -250,7 +248,6 @@ h2
 	box-shadow: inset 0px 4px 4px rgba(255, 255, 255, 0.25)
 	//padding: $btn-pt 0px $btn-pb
 
-
 .scrolled::-webkit-scrollbar
 	width: 10px
 	height: 4px
@@ -264,3 +261,29 @@ h2
 .scrolled
 	scrollbar-color: $scrollbar_bg rgba(229, 229, 229, 0.39)
 	scrollbar-width: thin
+
+.link
+	display: flex
+	flex-direction: row
+	justify-content: center
+	background: none
+	border: none
+	font-size: inherit
+	font-family: inherit
+	color: #1D6390
+	width: 100%
+	padding-bottom: 20px
+	padding-top: 5px
+	cursor: pointer
+.link::after
+  content: ''
+  height: 16px
+  width: 25px
+  background-repeat: no-repeat
+  background-size: 15px 15px
+  background-position: right center
+
+.showinmobile
+  display: none
+  +laptop-down
+    display: flex
