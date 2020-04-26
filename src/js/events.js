@@ -2,6 +2,7 @@
     const langMenu = document.querySelector('.lang-menu');
 
     langMenu.addEventListener('click', e => {
+        e.preventDefault();
         if (langMenu.classList.contains('selected')) {
             langMenu.classList.remove('selected');
         } else {
