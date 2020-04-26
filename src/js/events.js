@@ -1,12 +1,12 @@
 ;(function() {
     const langMenu = document.querySelector('.lang-menu');
-    //const socialMenu = document.querySelector('.social-menu');
+    const socialMenu = document.querySelector('.social-menu');
 
-    /*if (window.innerWidth < 1024) {
+    if (window.innerWidth < 1024) {
         const headerMobileContainer = document.querySelector('.header-mob .container');
         headerMobileContainer.append(langMenu);
         headerMobileContainer.append(socialMenu);
-    }*/
+    }
 
     langMenu.addEventListener('click', e => {
         e.preventDefault();
