@@ -9,21 +9,30 @@
   .container
     padding-top: 50px
     padding-bottom: 50px
+    +large-down
+      padding-top: 20px
     +laptop-down
+      padding-top: 47px
       padding-bottom: 62px
       position: relative
 
+
   .title
     margin-bottom: 25px
+    +large-down
+      margin-bottom: 20px
+    +laptop-down
+      margin-bottom: 30px
 
   &__descr
     text-align: center
     margin-bottom: 25px
     +large-down
       margin-bottom: 10px
+      padding: 0px 30px
     +laptop-down
       padding: 0px 5px
-      margin-bottom: 20px
+      margin-bottom: 17px
 
 .books-menu-wrap
   display: flex
@@ -47,10 +56,11 @@
 
 
   +large-down
-    height: 300px
+    height: 340px
     font-size: 18px
     line-height: 22px
     color: red
+    margin-bottom: 20px
 
   +laptop-down
     display: none
@@ -71,7 +81,7 @@
   background-color: aqua
 
   +large-down
-    margin-bottom: 5px
+    margin-bottom: 8px
     margin-left: 34px
 
   +laptop-down
@@ -133,9 +143,9 @@
   padding: 0px
   font-size: 20px
   line-height: 24px
-  background-color: red
+  background-color: transparent
   width: auto
-  padding-right: 20px
+  padding-right: 22px
   position: relative
   margin-bottom: 10px
   &:last-child

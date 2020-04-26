@@ -14,6 +14,7 @@
       min-height: 54px
       padding: 0px 38px
     +laptop-down
+      min-height: 60px
       padding: 0px 15px
 
   .logo
@@ -23,6 +24,10 @@
     +large-down
       top: -10px
       left: -5px
+    +laptop-down
+      padding: 8px
+      top: 0px
+      left: 0px
 
   .social-menu
     align-self: center
@@ -38,12 +43,13 @@
     margin-left: calc(-#{$width_search} / 2)
     +large-down
       margin-left: calc(-#{$width_search_lapt} / 2)
-    +large-down
-      margin-left: calc(-145px / 2)
+    +laptop-down
+      margin-left: calc(-145px / 2 + 17px)
 
   .lang-menu
     margin-left: auto
     align-self: center
+    background-color: $blue-dark
     +laptop-down
       display: none
 
@@ -120,13 +126,16 @@
   width: 50px
   height: 33px
   background:
-    color: #9231ce
+    color: transparent
     image: url("../images/icons/icon_gumburg.svg")
     repeat: no-repeat
     size: contain
     position: center
   box-shadow: none
   border-radius: 0px
+  +laptop-down
+    width: 30px
+    height: 20px
 
 .btn-close
   padding: 0px
@@ -169,8 +178,15 @@
     min-height: 50px
     width: 100%
 
+
   .container
     flex-direction: row
-    justify-content: space-evenly
+    justify-content: flex-start
+    padding: 0px 40px
+    position: relative
   .social-menu, .lang-menu
     align-self: center
+  .lang-menu
+    position: absolute
+    right: 40px
+    background-color: $blue-dark
