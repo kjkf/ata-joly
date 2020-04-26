@@ -10,8 +10,8 @@
                 let active = langMenu.querySelector('li.active');
                 active.classList.remove('active');
                 current.classList.add('active');
-                langMenu.classList.add('selected');
             }
+            langMenu.classList.add('selected');
         }
 
     });
