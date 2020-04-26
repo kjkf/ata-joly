@@ -11,13 +11,15 @@
 
   +large-down
     background-size: 1095px
-    min-height: 787px
-    background-position: center 66px
+    min-height: 780px
+    background-position: center 54px
+    //min-height: 784px
 
   +laptop-down
     background-image: url("../images/content/banner_mob_bg.png")
-    background-size: 500px
-    position: center
+    background-size: contain
+    min-height: 497px
+
 
   .container
     padding-top: 60px
@@ -25,8 +27,13 @@
     background-color: rgba(0,0,0,0.5)
 
     +large-down
-      min-height: 784px
-      padding-top: 230px
+      //min-height: 784px
+      padding-top: 248px
+    +laptop-down
+      padding-top: 195px
+      //min-height: 437px
+
+
 
 .main-title
   font-family: $font_KZExo2_Thin
@@ -39,6 +46,8 @@
   +laptop-down
     font-size: 30px
     line-height: 30px
+    margin-bottom: 3px
+
 
 .main-subtitle
   font-family: $font_KZCenturyGothic
@@ -49,11 +58,11 @@
   margin: 0px 0px 35px 0px
 
   +large-down
-    margin-bottom: 45px
+    margin-bottom: 37px
   +laptop-down
     font-size: 12px
     line-height: 15px
-
+    margin-bottom: 10px
 
 .slogan
   font-family: $font_KZAriston
