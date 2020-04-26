@@ -35,15 +35,16 @@
 				<button type="button" class="btn btn-close" id="btn_close"></button>
 				<ul class="menu first-menu">
 					<li class="menu__item"><a href="#" class="menu__link">Басқы бет</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Библиотека</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Ата жолы</a>
+					<li class="menu__item"><a href="#section_02" class="menu__link">Библиотека</a></li>
+					<li class="menu__item"><a href="#section_03" class="menu__link">Секция 3</a></li>
+					<li class="menu__item"><a href="#section_04" class="menu__link">Ата жолы</a>
 						<ul class="menu-sub">
-							<li class="menu-sub__item"><a class="menu-sub__link" href="#">Ата жолы түсінігі</a></li>
-							<li class="menu-sub__item"><a class="menu-sub__link" href="#">Ата жолы тарихы</a></li>
+							<li class="menu-sub__item"><a class="menu-sub__link" href="#section_04">Ата жолы түсінігі</a></li>
+							<li class="menu-sub__item"><a class="menu-sub__link" href="#section_05">Ата жолы тарихы</a></li>
 						</ul>
 					</li>
-					<li class="menu__item"><a href="#" class="menu__link">Ак ұл</a></li>
-					<li class="menu__item"><a href="#" class="menu__link">Байланыс</a></li>
+					<li class="menu__item"><a href="#section_06" class="menu__link">Секция 6</a></li>
+					<li class="menu__item"><a href="#footer" class="menu__link">Байланыс</a></li>
 				</ul>
 
 				<ul class="menu">
@@ -67,7 +68,7 @@
 
 	</div>
 </div>
-<div class="books bg--yellow">
+<div class="books bg--yellow" id='section_02'>
 	<div class="container">
 		<h1 class="title">КІТАПТАР</h1>
 		<p class="books__descr">
@@ -115,7 +116,7 @@
 		<a href="#" class="link books-link">Жаңа кітапхана</a>
 	</div>
 </div>
-<div class="freq-books bg--blue">
+<div class="freq-books bg--blue" id='section_03'>
 	<div class="container">
 		<div class="section-wrapper">
 			<div class="section__col">
@@ -254,7 +255,7 @@
 		</div>
 	</div>
 </div>
-<div class="history concept">
+<div class="history concept" id='section_04'>
 	<div class="container ">
 		<h1 class="title">АТА ЖОЛЫНЫҢ ТҮСІНІГІ</h1>
 		<div class="history-wrap scrolled">
@@ -274,7 +275,7 @@
 		</div>
 	</div>
 </div>
-<div class="history bg--yellow">
+<div class="history bg--yellow" id='section_05'>
 	<div class="container">
 		<h1 class="title">АТА ЖОЛЫНЫҢ ТАРИХЫ</h1>
 		<div class="history-wrap scrolled">
@@ -293,7 +294,7 @@
 		</div>
 	</div>
 </div>
-<div class="article bg--blue">
+<div class="article bg--blue" id='section_06'>
 	<div class="container">
 		<div class="section-wrapper">
 			<div class="section__col">
@@ -377,7 +378,7 @@
 		</div>
 	</div>
 </div>
-<div class="footer bg--blue">
+<div class="footer bg--blue" id='footer'>
 	<div class="container">
 		<div class="container__row">
 			<span>Күнделікті жолдауларға жазылыңыз:</span>
@@ -391,14 +392,15 @@
 			<button type="button" name="button" class="link footer-cond__link" onclick="showCond()">Сайт материалдарын пайдалану шарты</button>
 			<ul class="footer-menu">
 				<li><a href="">Басқы бет</a> </li>
-				<li><a href="">Библиотека</a></li>
+				<li><a href="#section_02">Библиотека</a></li>
+				<li><a href="#section_03">Секция 3</a></li>
 				<li><a href="">Ата жолы</a></li>
 				<ul class="footer-submenu">
-					<li><a href="">Ата жолы түсінігі</a></li>
-					<li><a href="">Ата жолы тарихы</a></li>
+					<li><a href="#section_04">Ата жолы түсінігі</a></li>
+					<li><a href="#section_05">Ата жолы тарихы</a></li>
 				</ul>
-				<li><a href="">Ак ұл</a></li>
-				<li><a href="">Байланыс</a></li>
+				<li><a href="#section_06">Секция 6</a></li>
+				<li><a href="#footer">Байланыс</a></li>
 			</ul>
 			<div class="footer-cond">
 				Сайт материалдарын пайдалану шарты
@@ -443,12 +445,7 @@
 </div>
 
 <!--                                pop-ups                              -->
-
-<div class="feedback-block">
-	<!-- <div class="feedback-caption">
-		<span class='section__col-title'>Кері байланыс</span>
-		<button class='popup-block__close' type="button" name="button" onClick="closePopup()"></button>
-	</div> -->
+<div class="feedback-block" >
 	<div class="feedback-block__content">
 			<input class="text-field" type="text" name="" value="" placeholder="Введите Ваш e-mail"/>
 			<input class="text-field" type="text" name="" value="" placeholder="Введите тему Вашего обращения"/ />
