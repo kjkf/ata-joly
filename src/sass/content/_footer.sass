@@ -139,7 +139,7 @@
     font-size: 20px
     line-height: 25px
     color: #ffffff
-    
+
 .footer-cond__link
   display: none
   color: #FFFFFF
@@ -200,22 +200,7 @@
   +laptop-down
     width: auto
     align-items: center
-.icn
-  width: 35px
-  height: 35px
-  margin: 0px 15px 15px 0px
-  background-size: 35px 35px
-  background-position: center center
-  cursor: pointer
-  &:hover
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8) //некорректно работает
-  &__telegram
-    background-image: url('../images/icons/icon_telegram.svg')
-  &__fb
-    background-image: url('../images/icons/icon_fb.svg')
-  &__tw
-    background-image: url('../images/icons/icon_twit.svg')
-  &__yt
-    background-image: url('../images/icons/icon_youtube.svg')
-  +laptop-down
-    margin: 15px 15px 0px 0px
+  .icn
+    margin: 0px 15px 15px 0px
+    +laptop-down
+      margin: 15px 15px 0px 0px
