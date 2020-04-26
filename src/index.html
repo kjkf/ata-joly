@@ -23,12 +23,36 @@
 		<label class="search">
 			<input type="text" class="search__field" placeholder="Поиск">
 		</label>
-		<ul class="lang-menu">
+		<ul class="lang-menu selected">
 			<li class="lang-menu__item"><a href="#">TR</a></li>
 			<li class="lang-menu__item"><a href="#">RU</a></li>
 			<li class="lang-menu__item"><a href="#">EN</a></li>
-			<li class="lang-menu__item"><a href="#">KZ</a></li>
+			<li class="lang-menu__item active"><a href="#">KZ</a></li>
 		</ul>
+		<div class="header__nav">
+			<button type="button" class="btn btn-gamburg" id="btn_gamburg"></button>
+			 <div class="menu-wrap">
+				<button type="button" class="btn btn-close" id="btn_close"></button>
+				<ul class="menu first-menu">
+					<li class="menu__item"><a href="#" class="menu__link">Басқы бет</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Библиотека</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Ата жолы</a>
+						<ul class="menu-sub">
+							<li class="menu-sub__item"><a class="menu-sub__link" href="#">Ата жолы түсінігі</a></li>
+							<li class="menu-sub__item"><a class="menu-sub__link" href="#">Ата жолы тарихы</a></li>
+						</ul>
+					</li>
+					<li class="menu__item"><a href="#" class="menu__link">Ак ұл</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Байланыс</a></li>
+				</ul>
+
+				<ul class="menu">
+					<li class="menu__item"><a href="#" class="menu__link">Басқы сайт</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Тоқберген Байтасовтың блогы</a></li>
+					<li class="menu__item"><a href="#" class="menu__link">Жеке блогтар</a></li>
+				</ul>
+			</div>
+		</div>
 	</div>
 </div>
 <div class="banner">
@@ -38,6 +62,22 @@
 		<span class="slogan">жанымның жаңыру жолында</span>
 	</div>
 </div>
+<div class="header-mob bg--blue">
+	<div class="container">
+		<ul class="social-menu">
+			<li class="social-menu__item"><a href="#" class="telegram"></a></li>
+			<li class="social-menu__item"><a href="#" class="youtube"></a></li>
+			<li class="social-menu__item"><a href="#" class="twitter"></a></li>
+			<li class="social-menu__item"><a href="#" class="fb"></a></li>
+		</ul>
+		<ul class="lang-menu ">
+			<li class="lang-menu__item"><a href="#">TR</a></li>
+			<li class="lang-menu__item"><a href="#">RU</a></li>
+			<li class="lang-menu__item"><a href="#">EN</a></li>
+			<li class="lang-menu__item active"><a href="#">KZ</a></li>
+		</ul>
+	</div>
+</div>
 <div class="books bg--yellow">
 	<div class="container">
 		<h1 class="title">КІТАПТАР</h1>
@@ -45,42 +85,45 @@
 			Тылсым тапсырмасымен бүгінге дейін хатқа түсірілген 11 атаумен, 33 кітап болып басылып шығатын кітаптар жүйесі тұр. Бұл кітаптарда ата-бабаларымыз меңгерген жаратылыс ілімі мен құпия сырлар баяндалады. Математикалық, астрономиялық есептер мен геометриялық сызбалар, әлі де айтуға болмайтын, бүгінгі Ғылым әлі жете қоймаған құпия ақпараттар тұр.
 			Жалпы аманат бойынша 49 кітап жазылып, сол кітаптармен тылсымның 1001 есігі ашылады екен. Кітаптар ілім арқылы Құран үнімен жазылғандықтан белгілі бір тазалықты, тақуалықты талап етеді.
 		</p>
-		<ol class="books-menu">
-			<li class="books-menu__item"><a href="#">Ізгілік амалдары</a></li>
-			<li class="books-menu__item"><a href="#">Аруақ үні</a></li>
-			<li class="books-menu__item"><a href="#">Ойға түрткі ақылға дем</a></li>
-			<li class="books-menu__item"><a href="#">Ел Билік және терроризм</a></li>
-			<li class="books-menu__item"><a href="#">Ата жолы - бақ жолы, қадірлей білсең ағайын</a></li>
-			<li class="books-menu__item"><a href="#">Құлшылықтар құпиясы немесе құраннан бір үзік сыр</a></li>
-			<li class="books-menu__item"><a href="#">Сөз сұқбаты және тіл әдебі</a></li>
-			<li class="books-menu__item"><a href="#">Ақиқат бастауы</a></li>
-			<li class="books-menu__item"><a href="#">Ата жолы 1-кітап</a></li>
-			<li class="books-menu__item"><a href="#">Ата жолы 2-кітап</a></li>
-			<li class="books-menu__item"><a href="#">Ата жолы 3-кітап</a></li>
-			<li class="books-menu__item"><a href="#">Ата жолы 4-кітап</a></li>
-			<li class="books-menu__item"><a href="#">Ата жолы 5-кітап</a></li>
-			<li class="books-menu__item"><a href="#">Зікір өлеңдер жинағы</a></li>
-			<li class="books-menu__item"><a href="#">Зікір өлеңдер жинағы</a></li>
-			<li class="books-menu__item"><a href="#">Құран тағлымы</a></li>
-			<li class="books-menu__item"><a href="#">Жын шайтандар философиясы</a></li>
-			<li class="books-menu__item"><a href="#">Иман және махаббат</a></li>
-			<li class="books-menu__item"><a href="#">Иман және сенім</a></li>
-			<li class="books-menu__item"><a href="#">Масхабшылар ақидасы</a></li>
-			<li class="books-menu__item"><a href="#">Түп тұқияннан қазірге дейін</a></li>
-			<li class="books-menu__item"><a href="#">Аққу, сұңқарлар</a></li>
-			<li class="books-menu__item"><a href="#">Зікірде келген ақпараттар</a></li>
-			<li class="books-menu__item"><a href="#">Түс жору бөлімі</a></li>
-			<li class="books-menu__item"><a href="#">Қиямет қайым белгілері</a></li>
-			<li class="books-menu__item"><a href="#">Өлеңдер жинағы</a></li>
-			<li class="books-menu__item"><a href="#">Рухани тоқырау кезеңдері</a></li>
-			<li class="books-menu__item"><a href="#">Салт-дәстүрлер, әдет, ғұрып, жөн-жоралғылар</a></li>
-			<li class="books-menu__item"><a href="#">Ауырып ем іздегенше, ауырмайтын жол ізде</a></li>
-			<li class="books-menu__item"><a href="#">Адамзат құндылықтарының басты негіздері</a></li>
-			<li class="books-menu__item"><a href="#">Замана толғауы</a></li>
-			<li class="books-menu__item"><a href="#">Даналық негіздері</a></li>
-			<li class="books-menu__item"><a href="#">Тектілікті қалыптастыру, жаңашылдыққа қадам</a></li>
-		</ol>
-		<button type="button" class="btn">ЖАҢА КІТАПХАНА</button>
+		<div class="books-menu-wrap">
+			<ol class="books-menu">
+				<li class="books-menu__item"><a href="#">Ізгілік амалдары</a></li>
+				<li class="books-menu__item"><a href="#">Аруақ үні</a></li>
+				<li class="books-menu__item"><a href="#">Ойға түрткі ақылға дем</a></li>
+				<li class="books-menu__item"><a href="#">Ел Билік және терроризм</a></li>
+				<li class="books-menu__item"><a href="#">Ата жолы - бақ жолы, қадірлей білсең ағайын</a></li>
+				<li class="books-menu__item"><a href="#">Құлшылықтар құпиясы немесе құраннан бір үзік сыр</a></li>
+				<li class="books-menu__item"><a href="#">Сөз сұқбаты және тіл әдебі</a></li>
+				<li class="books-menu__item"><a href="#">Ақиқат бастауы</a></li>
+				<li class="books-menu__item"><a href="#">Ата жолы 1-кітап</a></li>
+				<li class="books-menu__item"><a href="#">Ата жолы 2-кітап</a></li>
+				<li class="books-menu__item"><a href="#">Ата жолы 3-кітап</a></li>
+				<li class="books-menu__item"><a href="#">Ата жолы 4-кітап</a></li>
+				<li class="books-menu__item"><a href="#">Ата жолы 5-кітап</a></li>
+				<li class="books-menu__item"><a href="#">Зікір өлеңдер жинағы</a></li>
+				<li class="books-menu__item"><a href="#">Зікір өлеңдер жинағы</a></li>
+				<li class="books-menu__item"><a href="#">Құран тағлымы</a></li>
+				<li class="books-menu__item"><a href="#">Жын шайтандар философиясы</a></li>
+				<li class="books-menu__item"><a href="#">Иман және махаббат</a></li>
+				<li class="books-menu__item"><a href="#">Иман және сенім</a></li>
+				<li class="books-menu__item"><a href="#">Масхабшылар ақидасы</a></li>
+				<li class="books-menu__item"><a href="#">Түп тұқияннан қазірге дейін</a></li>
+				<li class="books-menu__item"><a href="#">Аққу, сұңқарлар</a></li>
+				<li class="books-menu__item"><a href="#">Зікірде келген ақпараттар</a></li>
+				<li class="books-menu__item"><a href="#">Түс жору бөлімі</a></li>
+				<li class="books-menu__item"><a href="#">Қиямет қайым белгілері</a></li>
+				<li class="books-menu__item"><a href="#">Өлеңдер жинағы</a></li>
+				<li class="books-menu__item"><a href="#">Рухани тоқырау кезеңдері</a></li>
+				<li class="books-menu__item"><a href="#">Салт-дәстүрлер, әдет, ғұрып, жөн-жоралғылар</a></li>
+				<li class="books-menu__item"><a href="#">Ауырып ем іздегенше, ауырмайтын жол ізде</a></li>
+				<li class="books-menu__item"><a href="#">Адамзат құндылықтарының басты негіздері</a></li>
+				<li class="books-menu__item"><a href="#">Замана толғауы</a></li>
+				<li class="books-menu__item"><a href="#">Даналық негіздері</a></li>
+				<li class="books-menu__item"><a href="#">Тектілікті қалыптастыру, жаңашылдыққа қадам</a></li>
+			</ol>
+		</div>
+		<button type="button" class="link books-link showinmobile" onclick='showBooks()'>Кітаптар</button>
+		<a href="#" class="link books-link">Жаңа кітапхана</a>
 	</div>
 </div>
 <div class="freq-books bg--blue">
@@ -217,7 +260,7 @@
 					</div>
 				</div>
 
-				
+
 			</div>
 		</div>
 	</div>
@@ -335,8 +378,163 @@
 	</div>
 </div>
 <div class="footer bg--blue">
-	<div class="container"></div>
+	<div class="container">
+		<div class="container__row">
+			<span>Күнделікті жолдауларға жазылыңыз:</span>
+			<div class="footer-subscribe">
+				<input class='footer-input' type="text" name="" value="" placeholder="e-mail"></input>
+				<button class="footer-btn" type="button" name="button">Жазылу</button>
+			</div>
+			<button class="footer-btn" type="button" name="button" onclick="showFeedBack()">Кері байланыс</button>
+		</div>
+		<div class="container__row">
+			<button type="button" name="button" class="link footer-cond__link" onclick="showCond()">Сайт материалдарын пайдалану шарты</button>
+			<ul class="footer-menu">
+				<li><a href="">Басқы бет</a> </li>
+				<li><a href="">Библиотека</a></li>
+				<li><a href="">Ата жолы</a></li>
+				<ul class="footer-submenu">
+					<li><a href="">Ата жолы түсінігі</a></li>
+					<li><a href="">Ата жолы тарихы</a></li>
+				</ul>
+				<li><a href="">Ак ұл</a></li>
+				<li><a href="">Байланыс</a></li>
+			</ul>
+			<div class="footer-cond">
+				Сайт материалдарын пайдалану шарты
+				Көшіріп басу, сілтеме беру, материалды жариялау (фото,видео,аудио жазбаларды қоса) ata-zholy.kz сайты редакциясының хат
+				түріндегі рұқсаты берілгеннен кейін ғана жүзеге асырылады. Үшінші тараптың жарияланымды пайдалану
+				құқығы тек рұқсат етілген жағдайда ғана жүзеге асырылады.
+				Условия использования материалов сайта
+				Копирование, цитирование и последующее распространение материалов (включая фото, видео и аудиоматериалы) сайта ata-zholy.kz
+				допускается только с письменного разрешения редакции. Цитирование материалов, права на которые принадлежат третьим лицам,
+				производится на условиях, установленных правообладателями.
+			</div>
+
+		</div>
+		<div class="container__row">
+			<div class="footer-tags">
+				<ul class="tags-menu">
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Түс жору және жұлдыз жорамал</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Тілектер</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Өлеңдер/Тақпақтар</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Есімдер</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Ойжұмбақтар</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Өлеңдер/Тақпақтар</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Дін</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Түс жору және жұлдыз жорамал</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Есімдер</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Балалар</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Тілектер</a></li>
+					<li class="tags-menu__item"><a class="tags-menu__link" href="#">Өлеңдер/Тақпақтар</a></li>
+				</ul>
+			</div>
+			<div class="footer-icons">
+				<a href="#" class="icn icn__telegram"></a>
+				<a href="#" class="icn icn__yt"></a>
+				<a href="#" class="icn icn__tw"></a>
+				<a href="#" class="icn icn__fb"></a>
+			</div>
+		</div>
+		<div class="container__row">
+			здесь вставить счетчик
+		</div>
+	</div>
 </div>
+
+<!--                                pop-ups                              -->
+
+<div class="feedback-block">
+	<!-- <div class="feedback-caption">
+		<span class='section__col-title'>Кері байланыс</span>
+		<button class='popup-block__close' type="button" name="button" onClick="closePopup()"></button>
+	</div> -->
+	<div class="feedback-block__content">
+			<input class="text-field" type="text" name="" value="" placeholder="Введите Ваш e-mail"/>
+			<input class="text-field" type="text" name="" value="" placeholder="Введите тему Вашего обращения"/ />
+			<textarea class="text-field text-field__area" name="name" rows="8" cols="80" placeholder="Введите текст Вашего обращения"></textarea>
+			<button class="footer-btn" type="button" name="button">Отправить</button>
+	</div>
+</div>
+<div class="popup-block">
+	<div class="popup-block__caption">
+		<span class="popup-block__name"></span>
+		<button class='popup-block__close' type="button" name="button" onClick="closePopup()"></button>
+	</div>
+	<div class="popup-block__content">
+
+	</div>
+</div>
+
+
+
 <script src="main.min.js"></script>
+<script>
+	let popup = document.getElementsByClassName('popup-block') //это поп-ап
+	let popup_name = document.getElementsByClassName('popup-block__name')//наименование поп-ап
+	let popup_close = document.getElementsByClassName('popup-block__close')//кнопка закрыть
+	let popup_caption = document.getElementsByClassName('popup-block__caption')//заголовок поп-ап
+	let popup_content = document.getElementsByClassName('popup-block__content')// это содержимое поп-ап
+
+	function closePopup(){
+		if (popup[0].style.display == 'flex'){
+			if (popup_caption[0].style.display == 'flex'){
+				popup_caption[0].classList.remove('popup-block__caption-yellow');
+				popup_caption[0].classList.remove('popup-block__caption-blue');
+				popup_caption[0].style.display='none'
+			}
+			popup_content[0].classList.remove('popup-block__content-yellow');
+			popup_content[0].classList.remove('popup-block__content-blue');
+
+			popup_close[0].classList.remove('popup-block__close-white');
+			popup_close[0].classList.remove('popup-block__close-blue');
+			popup[0].style.display = 'none'
+		}
+	}
+
+	function showFeedBack(){
+		let feedback = document.getElementsByClassName('feedback-block') // это обратная связь
+		popup_name[0].innerHTML = "Кері байланыс";
+		popup_content[0].innerHTML=feedback[0].innerHTML
+
+		popup_caption[0].classList.add('popup-block__caption-blue');
+		popup_close[0].classList.add('popup-block__close-white');
+
+		popup_content[0].style.padding='0'
+		popup_caption[0].style.display='flex';
+		popup[0].style.display='flex'
+	}
+
+	function showCond(){
+		let cond = document.getElementsByClassName('footer-cond'); // это условия использования сайта
+		popup_name[0].innerHTML= "Условия";
+		popup_content[0].innerHTML="<div class='footer-cond' style='display:flex'>"+cond[0].innerHTML+"</div>";
+
+		popup_content[0].classList.add('popup-block__content-blue');
+		popup_content[0].classList.add('scrolled');
+		popup_caption[0].classList.add('popup-block__caption-blue');
+		popup_close[0].classList.add('popup-block__close-white');
+
+		popup_content[0].style.height='430px'
+		popup_caption[0].style.display='flex';
+		popup[0].style.display='flex';
+	}
+
+	function showBooks(){
+		let books = document.getElementsByClassName('books-menu-wrap'); // это условия использования сайта
+		popup_name[0].innerHTML = "Кітаптар";
+		popup_content[0].innerHTML="<div class='books-menu-wrap' style='display:flex'>"+books[0].innerHTML+"</div>";
+
+		popup_caption[0].classList.add('popup-block__caption-yellow');
+		popup_content[0].classList.add('popup-block__content-yellow');
+		popup_close[0].classList.add('popup-block__close-blue');
+
+		popup_caption[0].style.display='flex';
+		popup[0].style.display='flex';
+
+		console.log("popup_content[0] >>> "+ popup_content[0].innerHTML);
+		console.log("books[0].innerHTML = "+ books[0].innerHTML);
+	}
+</script>
 </body>
 </html>

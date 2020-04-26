@@ -18,6 +18,8 @@
       +laptop-down
         flex-direction: column
         justify-content: center
+        align-items: center
+        font-size: 20px
 
   color: #ffffff
   &-btn
@@ -31,16 +33,9 @@
     font-family: inherit
     font-weight: normal
     font-size: 24px
-  &-input
-    flex-grow: 1
-    border-style: none
-    font-family: inherit
-    font-size: inherit
-    color: black
-    text-align: center
-    margin-left: 3px
-    &::placeholder
-      color: #C1BFBF
+    +laptop-down
+      font-size: 20px
+
   li
     list-style: none
     color: #ffffff
@@ -66,11 +61,28 @@
     margin-right: 20px
   +laptop-down
     margin: 5px 0px 10px 0px
+    width: 300px
+    font-size: 20px
+  .footer-input
+    flex-grow: 1
+    border-style: none
+    font-family: inherit
+    font-size: inherit
+    color: black
+    text-align: center
+    margin-left: 3px
+    &::placeholder
+      color: #C1BFBF
+    +laptop-down
+      flex-grow: 0
+      max-width: 190px
   .footer-btn
     box-shadow: none
     max-width: 140px
     height: 38px
     margin: 1px 1px 1px 5px
+    +laptop-down
+      max-width: 100px
 
 .footer-menu
   display: flex
@@ -82,16 +94,34 @@
   padding-left: 65px
   margin-right: 40px
   border-right: 0.3px solid rgba(255, 255, 255, 0.5)
+  a
+    font-size: 20px
   +large-down
     min-width: 155px
     margin: 0px
     padding-right: 15px
     padding-left: 0px
     margin-right: 20px
-  a
-    font-size: 20px
+  +laptop-down
+    border-right: none
+    justify-content: space-around
+    align-items: center
+    margin: 20px 0 0 0
+    padding: 0
 .footer-submenu
   padding-left: 20px
+  +laptop-down
+    padding: 0
+    li
+      position: relative
+      &::before
+        width: 2px
+        height: 8px
+        background-color: #FFFFFF
+        position: absolute
+        top: -7px
+        right: 50%
+        content: ''
 .footer-cond
   display: flex
   flex-grow: 1
@@ -105,26 +135,31 @@
     margin: 0px
   +laptop-down
     display: none
+    background: #1D6390
+    font-size: 20px
+    line-height: 25px
+    color: #ffffff
+    
 .footer-cond__link
-  display: inline-flex
+  display: none
+  color: #FFFFFF
+  border-bottom: 0.3px solid rgba(255, 255, 255, 0.5)
   &::after
     background-image: url('../images/icons/icon_arrowLink_white.svg')
-    background-size: 15px 15px
-    size: 15px 15px
-    background-repeat: no-repeat
-    background-position: right center
-    content: ''
-
-
   +laptop-down
-    display: inline-flex
-
+    display: flex
 
 .footer-tags
   display: flex
   flex-grow: 1
   margin-right: 40px
   border-right: 0.3px solid rgba(255, 255, 255, 0.5)
+  +laptop-down
+    border-right: none
+    border-bottom: 0.3px solid rgba(255, 255, 255, 0.5)
+    margin: 0
+    padding: 0 5px
+
 .tags-menu
   display: flex
   flex-direction: row
@@ -136,13 +171,22 @@
   padding-right: 5px
   +large-down
     padding: 0
+  +laptop-down
+    padding: 0
+    height: auto
+    justify-content: center
   &__item
-    display: inline-flex
+    display: flex
     min-width: 300px
     margin: 0px 10px 10px 0px
     +large-down
       min-width: 225px
       margin: 0px 10px 5px 0px
+    +laptop-down
+      display: contents//надо заменить на   другое, т.к. только частично поддерживается последними версиями браузера
+      width: auto
+      &::after
+        content: ','
   &__link
     font-size: 24px
     margin-bottom: 15px
@@ -153,19 +197,25 @@
   display: flex
   flex-direction: row
   flex-wrap: wrap
+  +laptop-down
+    width: auto
+    align-items: center
 .icn
   width: 35px
   height: 35px
   margin: 0px 15px 15px 0px
   background-size: 35px 35px
   background-position: center center
+  cursor: pointer
   &:hover
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8) //некорректно работает
   &__telegram
-    background-image: url('../images/icons/icon_telegram.png')
+    background-image: url('../images/icons/icon_telegram.svg')
   &__fb
-    background-image: url('../images/icons/icon_fb.png')
+    background-image: url('../images/icons/icon_fb.svg')
   &__tw
-    background-image: url('../images/icons/icon_twit.png')
+    background-image: url('../images/icons/icon_twit.svg')
   &__yt
-    background-image: url('../images/icons/icon_youtube.png')
+    background-image: url('../images/icons/icon_youtube.svg')
+  +laptop-down
+    margin: 15px 15px 0px 0px

@@ -9,11 +9,29 @@
   .container
     padding-top: 50px
     padding-bottom: 50px
+    +laptop-down
+      padding-bottom: 62px
+      position: relative
+
   .title
-    margin-bottom: 20px
+    margin-bottom: 25px
+
   &__descr
     text-align: center
-    margin-bottom: 20px
+    margin-bottom: 25px
+    +large-down
+      margin-bottom: 10px
+    +laptop-down
+      padding: 0px 5px
+      margin-bottom: 20px
+
+.books-menu-wrap
+  display: flex
+  width: 100%
+  .title
+    display: none
+    +laptop-down
+      display: block
 
 .books-menu
   display: flex
@@ -21,31 +39,124 @@
   flex-wrap: wrap
   height: 580px
   width: 100%
+  margin: 0px
+  padding: 0px
+  line-height: 36px
+  list-style: none
+  counter-reset: my-awesome-counter
+
+
+  +large-down
+    height: 300px
+    font-size: 18px
+    line-height: 22px
+    color: red
 
   +laptop-down
     display: none
     font-size: 16px
-    background: red
+    //--- added by Bota
+    flex-wrap: nowrap
+    height: 450px
 
-  +large-down
-    font-size: 18px
+
+
+
 
 .books-menu__item
-  margin-left: $width_books_item
+  margin-left: 45px
   margin-bottom: 15px
-  margin-right: 44px
-  a
-    color: inherit
-    position: relative
-    line-height: 36px
-    &:before
-      content: ''
-      position: absolute
-      left: calc(-#{$width_books_item} - 40px)
-      top: 0px
-      width: $width_books_item
-      height: $height_books_item
-      background:
-        image: url("../images/icons/icon_book_opened.svg")
-        repeat: no-repeat
-        size: contain
+  //margin-right: 44px
+  counter-increment: my-awesome-counter
+  background-color: aqua
+
+  +large-down
+    margin-bottom: 5px
+    margin-left: 34px
+
+  +laptop-down
+    margin-left: 11px!important
+    margin-bottom: 16px
+
+
+  &::before
+    content: counter(my-awesome-counter) ". "
+    color: blue
+    font-weight: bold
+    margin-right: 10px
+    +laptop-down
+      margin-right: 3px
+
+
+
+
+.books-menu__item a
+  color: inherit
+  position: relative
+  color: red
+
+  &:before
+    content: ''
+    position: absolute
+    left: calc(-#{$width_books_item} - 40px)
+    top: 0px
+    width: $width_books_item
+    height: $height_books_item
+    background:
+      color: transparent
+      image: url("../images/icons/icon_book_opened.svg")
+      repeat: no-repeat
+      size: contain
+    +large-down
+      width: 25.75px
+      height: 25px
+      left: -57px
+    +laptop-down
+      width: 15px
+      height: 14.57px
+      left: -36px
+
+.books-menu__item:nth-child(n + 10)
+  margin-left: 40px
+  +large-down
+    margin-left: 30px
+
+  &::before
+    margin-right: 5px
+    +large-down
+      margin-right: 7px
+
+.books-menu__item:nth-child(n + 12)
+  margin-left: 0px
+
+.books-link
+  padding: 0px
+  font-size: 20px
+  line-height: 24px
+  background-color: red
+  width: auto
+  padding-right: 20px
+  position: relative
+  margin-bottom: 10px
+  &:last-child
+    margin-bottom: 0px
+  &::after
+    content: ''
+    position: absolute
+    display: inline-block
+    top: 50%
+    right: 0px
+    width: 15px
+    height: 15px
+    margin-top: calc(-15px/2)
+    background:
+      color: transparent
+      image: url('../images/icons/icon_arrowLink_blue.svg')
+      size: contain
+      repeat: no-repeat
+      position: center
+
+.popup-block__content
+  .books-menu
+    display: flex
+    overflow-y: scroll

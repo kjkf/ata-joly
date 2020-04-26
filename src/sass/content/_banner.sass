@@ -2,22 +2,31 @@
   display: flex
   min-height: 1124px
   width: 100%
-
+  background:
+    color: transparent
+    image: url("../images/content/banner_bg.png")
+    size: 1680px
+    repeat: no-repeat
+    position: center top
 
   +large-down
-    background-size: contain
+    background-size: 1095px
+    min-height: 787px
+    background-position: center 66px
+
+  +laptop-down
+    background-image: url("../images/content/banner_mob_bg.png")
+    background-size: 500px
+    position: center
 
   .container
     padding-top: 60px
     margin-top: -120px
-    background:
-      color: transparent
-      image: url("../images/content/banner_bg.png")
-      size: 100%
-      repeat: no-repeat
-      position: center top
+    background-color: rgba(0,0,0,0.5)
+
     +large-down
       min-height: 784px
+      padding-top: 230px
 
 .main-title
   font-family: $font_KZExo2_Thin
@@ -27,6 +36,9 @@
   text-align: center
   text-transform: uppercase
   margin: 0px 0px 30px 0px
+  +laptop-down
+    font-size: 30px
+    line-height: 30px
 
 .main-subtitle
   font-family: $font_KZCenturyGothic
@@ -36,6 +48,13 @@
   text-transform: lowercase
   margin: 0px 0px 35px 0px
 
+  +large-down
+    margin-bottom: 45px
+  +laptop-down
+    font-size: 12px
+    line-height: 15px
+
+
 .slogan
   font-family: $font_KZAriston
   font-size: $fontSize_slogan
@@ -43,3 +62,6 @@
   text-align: center
   text-transform: lowercase
   margin: 0px
+  +laptop-down
+    font-size: 18px
+    line-height: 19px

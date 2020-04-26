@@ -73,7 +73,6 @@ h2
 		padding-left: 90px
 		padding-right: 90px
 
-
 	+large-down
 		padding-left: 35px
 		padding-right: 35px
@@ -119,7 +118,7 @@ h2
 	border-radius: 50%
 	background-color: $blue-dark
 	padding: 14px
-	+phone
+	+laptop-down
 		width: $logo_width_mob
 		height: $logo_height_mob
 	a
@@ -148,10 +147,17 @@ h2
 			image: url("../images/icons/icon_search.svg")
 			repeat: no-repeat
 			size: contain
-		+laptop-down
+		+large-down
 			top: calc( (#{$height_search_lapt} - #{$height_search_ic}) / 2)
-	+laptop-down
+		+laptop-down
+			width: $width_search_ic_mob
+			height: $height_search_ic_mob
+			top: calc( (#{$height_search_mob} - #{$height_search_ic_mob}) / 2)
+
+	+large-down
 		width: $width_search_lapt
+	+laptop-down
+		width: 145px
 	&__field
 		width: 100%
 		min-height: $height_search
@@ -160,13 +166,21 @@ h2
 		background-color: #FFFFFF
 		font-size: 24px
 		font-family: $font_KZPFDinTextCompProRegular
-		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + #{$width_search_ic})
-		+laptop-down
+		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 30px)
+		+large-down
 			font-size: 0.5rem
 			min-height: $height_search_lapt
+			border-radius: 5px
+		+laptop-down
+			min-height: $height_search_mob
+			padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 15px)
+			border-radius: 8px
+
+
 
 		+placeholder
 			color: $grey1
+
 .lang-menu
 	display: flex
 	flex-direction: row
@@ -178,7 +192,7 @@ h2
 	line-height: $lineHeight_lang
 	border-radius: $rad_lang
 	border: 2px solid #FFFFFF
-	padding: 5px 0px
+	padding: 0px
 	&__item
 		display: inline-flex
 		justify-content: center
@@ -187,6 +201,10 @@ h2
 		width: $width_lang_item
 		min-height: $height_lang_item
 		border-right: 0.3px solid $borderColor_lang
+
+		+laptop-down
+			width: 36px
+
 		&:last-child
 			margin-right: 0px
 			border-right: 0px
@@ -197,6 +215,12 @@ h2
 		&:hover
 			a
 				text-shadow: $shadow_hover
+
+.lang-menu.selected
+	.lang-menu__item
+		display: none
+	.lang-menu__item.active
+		display: inline-flex
 
 .text-center
 	text-align: center
@@ -237,3 +261,29 @@ h2
 .scrolled
 	scrollbar-color: $scrollbar_bg rgba(229, 229, 229, 0.39)
 	scrollbar-width: thin
+
+.link
+	display: flex
+	flex-direction: row
+	justify-content: center
+	background: none
+	border: none
+	font-size: inherit
+	font-family: inherit
+	color: #1D6390
+	width: 100%
+	padding-bottom: 20px
+	padding-top: 5px
+	cursor: pointer
+.link::after
+  content: ''
+  height: 16px
+  width: 25px
+  background-repeat: no-repeat
+  background-size: 15px 15px
+  background-position: right center
+
+.showinmobile
+  display: none
+  +laptop-down
+    display: flex
