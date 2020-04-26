@@ -1,5 +1,5 @@
 ;(function () {
-    const mql1200 = window.matchMedia("(max-width: 1200px)");
+  /*  const mql1200 = window.matchMedia("(max-width: 1200px)");
     const mql1023 = window.matchMedia("(max-width: 1023px)");
     const mql992 = window.matchMedia("(max-width: 992px)");
     const mql576 = window.matchMedia("(max-width: 576px)");
@@ -25,5 +25,5 @@
     mql1023.addEventListener("change", () => {
         handlerForMediaQueries();
     });
-
+*/
 })();
