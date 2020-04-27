@@ -4,6 +4,7 @@
     const headerNav = document.querySelector('.header__nav');
     const btnGumburg = document.querySelector('.btn-gamburg');
     const headerMobile = document.querySelector('.header-mob');
+    const footer = document.getElementById('footer');
 
     if (window.innerWidth < 1024) {
         const headerMobileContainer = document.querySelector('.header-mob .container');
@@ -39,9 +40,7 @@
 
     window.addEventListener('scroll', e => {
         if (window.innerWidth < 1024) {
-            //console.log(document.documentElement.clientHeight, document.documentElement.scrollHeight);
-            //console.log(pageYOffset);
-            if (pageYOffset === document.documentElement.scrollHeight - document.documentElement.clientHeight) {
+            if (footer.getBoundingClientRect().height > document.documentElement.scrollHeight - document.documentElement.clientHeight - pageYOffset) {
                 headerMobile.style.display = 'none';
             } else {
                 headerMobile.style.display = 'flex';
