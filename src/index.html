@@ -480,8 +480,10 @@
 				popup_caption[0].classList.remove('popup-block__caption-blue');
 				popup_caption[0].style.display='none'
 			}
+			popup_content[0].classList.remove('scrolled');
 			popup_content[0].classList.remove('popup-block__content-yellow');
 			popup_content[0].classList.remove('popup-block__content-blue');
+			popup_content[0].style.padding='20px'
 
 			popup_close[0].classList.remove('popup-block__close-white');
 			popup_close[0].classList.remove('popup-block__close-blue');
@@ -505,7 +507,7 @@
 	function showCond(){
 		let cond = document.getElementsByClassName('footer-cond'); // это условия использования сайта
 		popup_name[0].innerHTML= "Условия";
-		popup_content[0].innerHTML="<div class='footer-cond' style='display:flex; padding-bottom:20px'>"+cond[0].innerHTML+"</div>";
+		popup_content[0].innerHTML="<div class='footer-cond' style='display:flex;'>"+cond[0].innerHTML+"</div>";
 
 		popup_content[0].classList.add('popup-block__content-blue');
 		popup_content[0].classList.add('scrolled');
@@ -522,10 +524,12 @@
 		popup_name[0].innerHTML = "Кітаптар";
 		popup_content[0].innerHTML="<div class='books-menu-wrap' style='display:flex'>"+books[0].innerHTML+"</div>";
 
-		popup_caption[0].classList.add('popup-block__caption-yellow');
 		popup_content[0].classList.add('popup-block__content-yellow');
+		popup_content[0].classList.add('scrolled');
+		popup_caption[0].classList.add('popup-block__caption-yellow');
 		popup_close[0].classList.add('popup-block__close-blue');
 
+		popup_content[0].style.height='430px'
 		popup_caption[0].style.display='flex';
 		popup[0].style.display='flex';
 
