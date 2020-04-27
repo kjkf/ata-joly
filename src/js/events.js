@@ -12,7 +12,7 @@
         headerMobileContainer.append(langMenu);
         headerMobileContainer.append(socialMenu);
 
-        banner.style.height = `${window.innerHeight}px`;
+        banner.style.minHeight = `${window.innerHeight}px`;
     }
 
     langMenu.addEventListener('click', e => {
