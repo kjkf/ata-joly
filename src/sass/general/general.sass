@@ -269,13 +269,18 @@ h2
 	justify-content: center
 	background: none
 	border: none
-	font-size: inherit
+	font-size: 30px
 	font-family: inherit
 	color: #1D6390
 	width: 100%
 	padding-bottom: 20px
 	padding-top: 5px
 	cursor: pointer
+	+large-down
+		font-size: 20px
+	+laptop-down
+    font-size: 20px
+
 .link::after
   content: ''
   height: 16px
@@ -294,7 +299,7 @@ h2
   height: 30px
   border-radius: 50%
   border: 3px solid #FFFFFF
-  background-size: 18px 18px
+  background-size: 15px 15px
   background-repeat: no-repeat
   background-position: center center
   cursor: pointer
@@ -308,4 +313,3 @@ h2
     background-image: url('../images/icons/icon_twit.svg')
   &__yt
     background-image: url('../images/icons/icon_youtube.svg')
-  
