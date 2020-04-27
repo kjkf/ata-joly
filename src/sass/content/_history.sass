@@ -48,25 +48,29 @@
 .history__pict
   width: 403px
   min-width: 403px
-  height: 607px
+  height: auto
+  //min-height: 607px
   border-radius: 20px
   overflow: hidden
 
   img
+    display: inline-block
     width: 100%
-    height: 100%
+    height: auto
 
   +large-down
     width: 287px
     min-width: 287px
-    height: 494px
+    //height: 494px
+    //min-height: 494px
 
   +laptop-down
     order: -1
     align-self: center
-    width: 200px
-    min-width: 200px
-    min-height: 140px
+    width: 202px
+    min-width: 202px
+    //height: 142px
+    //min-height: 142px
     margin-bottom: 20px
     border-radius: 10px
 
@@ -99,7 +103,7 @@
     +laptop-down
       width: 250px
       min-width: 250px
-      min-height: 143px
+      //min-height: 143px
 
 .history-wrap
   display: flex
@@ -111,4 +115,6 @@
 
   +laptop-down
     flex-direction: column
+    justify-content: center
     height: 420px
+    flex-flow: wrap
