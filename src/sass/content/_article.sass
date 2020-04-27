@@ -7,17 +7,27 @@
 
 .article .section-wrapper
   .section__col
+    +laptop-down
+      height: 415px
     &:first-child
       width: 50%
       +large-down
         margin-right: 30px
       +laptop-down
         width: 100%
+        margin-right: 0
       & .section-info-list
         //padding: 43px 0px 10px 10px
+        +laptop-down
+          padding-top: 14px
         & .section-info-item
-          padding-left: 45px
-          margin-bottom: 10px
+          padding-left: 92px
+          +large-down
+            padding-left: 45px
+            margin-bottom: 10px
+          +laptop-down
+            padding-left: 17px
+            margin-bottom: 3px
           &:before
             background-image: url("../images/icons/icon_note.svg")
             left: 23px
@@ -27,7 +37,10 @@
               width: 33px
               height: 33px
             +laptop-down
-              left: 5px
+              left: -3px
+              top: 10px
+              width: 13px
+              height: 13px
 
     & .section-info
       padding: 44px 10px
@@ -45,12 +58,16 @@
     & .item-descr
       color: #4aa7e1
       text-align: center
+      +laptop-down
+        padding: 34px
       & .video-title
         font-size: 30px
         line-height: 36px
         +large-down
           font-size: 22px
           line-height: 26px
+        +laptop-down
+          margin-bottom: 2px
       & .video-tags
         font-size: 24px
         line-height: 29px
