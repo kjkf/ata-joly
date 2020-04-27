@@ -1,29 +1,38 @@
 .article .container
   padding-top: 90px
   padding-bottom: 82px
+  +large-down
+    padding-top: 50px
+    padding-bottom: 50px
 
 .article .section-wrapper
   .section__col
     &:first-child
       width: 50%
+      +large-down
+        margin-right: 30px
       +laptop-down
         width: 100%
       & .section-info-list
         //padding: 43px 0px 10px 10px
         & .section-info-item
-          //padding-left: 83px
+          padding-left: 45px
+          margin-bottom: 10px
           &:before
             background-image: url("../images/icons/icon_note.svg")
             left: 23px
             +large-down
-              left: 12px
+              left: 5px
+              top: 10px
+              width: 33px
+              height: 33px
             +laptop-down
               left: 5px
 
     & .section-info
       padding: 44px 10px
       +large-down
-        padding: 9px 10px
+        padding: 7px 10px
       +laptop-down
         padding: 10px
 

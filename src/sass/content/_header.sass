@@ -9,13 +9,13 @@
     max-width: 100%
     flex-direction: row
     min-height: 60px
-    padding: 0px 30px
+    padding: 0px $header_cont_pl
     +large-down
       min-height: 54px
-      padding: 0px 38px
+      padding: 0px $header_cont_pl_laptop
     +laptop-down
       min-height: 60px
-      padding: 0px 15px
+      padding: 0px $header_cont_pl_mobile
 
   .logo
     position: absolute
@@ -63,26 +63,48 @@
   //opacity: 0
   display: none
   position: absolute
-  top: -10px
-  right: -30px
+  top: -30px
+  right: -$header_cont_pl
   background-color: $blue-dark
   border-bottom-left-radius: 15px
   padding: 17px 20px 14px
+  +large-down
+    right: -$header_cont_pl_laptop
+  +laptop-down
+    border-radius: 15px
+    right: calc(-#{$header_cont_pl_mobile} + 5px/2)
+    align-items: center
+    padding: 10px 12px 28px
 
 .menu, .menu-sub
   display: flex
   list-style: none
   margin: 0px
-  padding: 0px
   flex-direction: column
   margin-left: 10px
   padding: 27px 0px
+  +laptop-down
+    padding: 0px
+    margin: 0px
+    align-items: center
+    width: 100%
 
   &__item
     margin-bottom: 5px
+    +laptop-down
+      margin-bottom: 10px
+      text-align: center
+    &:last-child
+      margin-bottom: 0px
+
+.menu
+  +laptop-down
+    margin-top: 15px
 
 .menu-sub
   padding: 0px
+  +laptop-down
+    margin-top: 2px
 
 .menu__link
   color: #FFFFFF
@@ -100,6 +122,9 @@
 
 .menu-sub__item
   margin-left: 20px
+  +laptop-down
+    margin-left: 0px
+
 
 .menu-sub__link
   color: #FFFFFF
@@ -119,6 +144,12 @@
     border-top: 0px
     border-right: 0px
     border-bottom-left-radius: 5px
+    +laptop-down
+      border-bottom: 0px
+      border-radius: 0px
+      top: -3px
+      left: 50%
+      height: 8px
 
   +laptop-down
     font-size: $fontSize_menusub_mob
@@ -144,16 +175,26 @@
   width: 50px
   height: 50px
   border-radius: 50%
-  border: 1px solid #ffffff
+  border: 2px solid #ffffff
   box-shadow: none
   background-color: transparent
-  background-image: url("../images/icons/icon_close.svg")
+  background-image: url("../images/icons/icon_close_white.svg")
   background-repeat: no-repeat
-  background-size: cover
+  background-position: center
+  background-size: 50%
+  +laptop-down
+    width: 35px
+    height: 35px
+    min-width: 35px
+    min-height: 35px
+    background-size: 50%
+
 
 .menu-wrap
   .btn-close
     align-self: flex-end
+    +laptop-down
+      align-self: center
 
 .header__nav
   position: relative
@@ -165,13 +206,19 @@
 
   .menu-wrap
     min-width: 400px
-    z-index: -1
+    z-index: 1
+    +laptop-down
+      min-width: 315px
   .first-menu
     border-bottom: 0.3px solid rgba(255, 255, 255, 0.5)
+    +laptop-down
+      padding-bottom: 35px
 
   &.active
     .menu-wrap
       display: flex
+    .btn-gamburg
+      display: none
 
 .header-mob
   display: none
