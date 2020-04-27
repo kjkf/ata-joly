@@ -5,11 +5,14 @@
     const btnGumburg = document.querySelector('.btn-gamburg');
     const headerMobile = document.querySelector('.header-mob');
     const footer = document.getElementById('footer');
+    const banner = document.querySelector('.banner');
 
     if (window.innerWidth < 1024) {
         const headerMobileContainer = document.querySelector('.header-mob .container');
         headerMobileContainer.append(langMenu);
         headerMobileContainer.append(socialMenu);
+
+        banner.style.height = `${window.innerHeight}px`;
     }
 
     langMenu.addEventListener('click', e => {

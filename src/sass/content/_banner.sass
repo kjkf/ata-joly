@@ -19,8 +19,9 @@
     background-image: url("../images/content/banner_mob_bg.png")
     background-size: contain
     min-height: 497px
-    min-height: calc(100vh - #{$header_mob_h})
-    background-position: center calc(50% + 54px)
+    min-height: calc(100vh - #{$header_mob_h} - 60px)
+    background-position: center calc(50% - 13px)
+    //background-position: center calc(50% + 54px)
 
 
   .container
@@ -33,7 +34,7 @@
       padding-top: 248px
     +laptop-down
       padding-top: calc(195px - 120px)
-      margin-top: 0px
+      //margin-top: 0px
       //min-height: 437px
 
 
