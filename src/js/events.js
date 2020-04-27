@@ -1,6 +1,8 @@
 ;(function() {
     const langMenu = document.querySelector('.lang-menu');
     const socialMenu = document.querySelector('.social-menu');
+    const headerNav = document.querySelector('.header__nav');
+    const btnGumburg = document.querySelector('.btn-gamburg');
 
     if (window.innerWidth < 1024) {
         const headerMobileContainer = document.querySelector('.header-mob .container');
@@ -21,6 +23,16 @@
             }
             langMenu.classList.add('selected');
         }
+
+    });
+
+    btnGumburg.addEventListener('click', e => {
+        headerNav.classList.add('active');
+        const btnClose = document.querySelector('#btn_close');
+
+        btnClose.addEventListener('click', e => {
+            headerNav.classList.remove('active');
+        });
 
     });
 

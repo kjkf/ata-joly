@@ -17,7 +17,7 @@
         } else {
             var videos = document.getElementsByClassName("youtube-video");
         }
-        console.log(videos);
+        //console.log(videos);
         var nb_videos = videos.length;
         for (var i=0; i < nb_videos; i++) {
             // Находим постер для видео, зная ID нашего видео
