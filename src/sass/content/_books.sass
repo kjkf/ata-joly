@@ -16,7 +16,6 @@
       padding-bottom: 62px
       position: relative
 
-
   .title
     margin-bottom: 25px
     +large-down
@@ -56,37 +55,32 @@
   +laptop-down
     height: auto
     overflow-y: hidden
-
-
   +large-down
-    height: 340px
+    height: 390px
     font-size: 18px
     line-height: 22px
     margin-bottom: 20px
-
   +laptop-down
     display: none
     font-size: 16px
-    //--- added by Bota
     flex-wrap: nowrap
     height: 450px
 
-
 .books-menu__item
+  display: flex
   margin-left: 45px
   margin-bottom: 15px
-  //margin-right: 44px
+  padding-left: 45px
+  max-width: 500px
   counter-increment: my-awesome-counter
-
   +large-down
     margin-bottom: 8px
     margin-left: 34px
-
+    max-width: 250px
   +laptop-down
-    margin-left: 22px!important
-    margin-bottom: 16px
-
-
+    margin-left: 0px!important
+    margin-bottom: 10px
+    max-width: calc(100% - 50px)
   &::before
     content: counter(my-awesome-counter) ". "
     font-weight: bold
@@ -94,13 +88,11 @@
     +laptop-down
       margin-right: 3px
 
-
-
-
 .books-menu__item a
   color: inherit
   position: relative
-
+  word-break: break-word
+  display: inline-block
   &:before
     content: ''
     position: absolute
@@ -121,24 +113,20 @@
       width: 15px
       height: 14.57px
       left: -36px
+      top: 2px
 
 .books-menu__item:nth-child(n + 10)
-  margin-left: 40px
   +large-down
     margin-left: 30px
   +laptop-down
-    margin-left: 19px!important
-
+    margin-left: 0px!important
   &::before
     margin-right: 5px
     +large-down
       margin-right: 7px
     +laptop-down
       margin-right: 0px
-
-.books-menu__item:nth-child(n + 12)
-  margin-left: 0px
-
+      
 .books-link
   padding: 0px
   line-height: 24px

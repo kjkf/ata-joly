@@ -6,7 +6,7 @@
 	<title>ATA JOLY</title>
 
 	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
 	<link rel="stylesheet" href="css/styles.min.css">
 
 </head>
@@ -20,9 +20,13 @@
 			<li class="social-menu__item"><a href="#" class="icn icn__tw"></a></li>
 			<li class="social-menu__item"><a href="#" class="icn icn__fb"></a></li>
 		</ul>
-		<label class="search">
+		<!-- <label class="search">
 			<input type="text" class="search__field" placeholder="Поиск">
-		</label>
+		</label> -->
+		<div class="search closed">
+			<input type="text" class="search__field" placeholder="Поиск">
+			<button class="search__btn" type="button" name="button"></button>
+		</div>
 		<ul class="lang-menu selected">
 			<li class="lang-menu__item"><a href="#">TR</a></li>
 			<li class="lang-menu__item"><a href="#">RU</a></li>
@@ -34,17 +38,17 @@
 			 <div class="menu-wrap">
 				<button type="button" class="btn btn-close" id="btn_close"></button>
 				<ul class="menu first-menu">
-					<li class="menu__item"><a href="#" class="menu__link">Басқы бет</a></li>
-					<li class="menu__item"><a href="#section_02" class="menu__link">Библиотека</a></li>
-					<li class="menu__item"><a href="#section_03" class="menu__link">Секция 3</a></li>
-					<li class="menu__item"><a href="#section_04" class="menu__link">Ата жолы</a>
+					<li class="menu__item"><a href="#section_01" class="menu__link smooth_scroll">Басқы бет</a></li>
+					<li class="menu__item"><a href="#section_02" class="menu__link smooth_scroll">Библиотека</a></li>
+					<li class="menu__item"><a href="#section_03" class="menu__link smooth_scroll">Секция 3</a></li>
+					<li class="menu__item"><a href="#section_04" class="menu__link smooth_scroll">Ата жолы</a>
 						<ul class="menu-sub">
-							<li class="menu-sub__item"><a class="menu-sub__link" href="#section_04">Ата жолы түсінігі</a></li>
-							<li class="menu-sub__item"><a class="menu-sub__link" href="#section_05">Ата жолы тарихы</a></li>
+							<li class="menu-sub__item"><a class="menu-sub__link smooth_scroll" href="#section_04">Ата жолы түсінігі</a></li>
+							<li class="menu-sub__item"><a class="menu-sub__link smooth_scroll" href="#section_05">Ата жолы тарихы</a></li>
 						</ul>
 					</li>
-					<li class="menu__item"><a href="#section_06" class="menu__link">Секция 6</a></li>
-					<li class="menu__item"><a href="#footer" class="menu__link">Байланыс</a></li>
+					<li class="menu__item"><a href="#section_06" class="menu__link smooth_scroll">Секция 6</a></li>
+					<li class="menu__item"><a href="#footer" class="menu__link smooth_scroll">Байланыс</a></li>
 				</ul>
 
 				<ul class="menu">
@@ -59,7 +63,7 @@
 <div class="header-mob bg--blue">
 	<div class="container"></div>
 </div>
-<div class="banner">
+<div class="banner" id="section_01">
 	<div class="container">
 		<h1 class="main-title">Ата Жолы</h1>
 		<h2 class="main-subtitle">по пути предков</h2>
@@ -258,16 +262,19 @@
 		<h1 class="title">АТА ЖОЛЫНЫҢ ТҮСІНІГІ</h1>
 		<div class="history-wrap scrolled">
 			<p class="history__info">
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis congue mauris, vitae tempor justo lobortis eget. Fusce ut mi vitae lectus elementum pellentesque vitae tristique dolor. Quisque lacinia nisi lacus, vel accumsan tortor interdum nec. Vestibulum quis scelerisque eros, commodo imperdiet lorem. Suspendisse cursfinibus vel mi. Pell ut, rutrum bibendum eros. Maecenas a mi at ipsum convallis facilisis.
-				Proin sit amet venenatis justo. Mauris non consectetur est. Duis est metus, facilisis fermentum consectetur vitae, venenatis ac ligula. Pellentesque pharetra sellus ut eros ut diam vestibulum lobortis id eu nulla.
-				Curabitur congue, purus sed pulvinar pretium, dui est porta diam, vitae tempus leo quam quis libero. Vivamus vel varius ipsum. Morbi id tristique quam, vel dictum neque. Aliquam elementum vitae nisi ac Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis congue mauris, vitae tempor justo lobortis eget. Fusce ut mi vitae lectus elementum pellentesque vitae tristique dolor. Quisque lacinia nisi lacus, vel accumsan tortor interdum nec. Vestibulum quis scelerisque eros, commodo imperdiet lorem. Suspendisse cursfinibus vel mi. Pell ut, rutrum bibendum eros. Maecenas a mi at ipsum convallis facilisis.
-				Proin sit amet venenatis justo. Mauris non consectetur est. Duis est metus, facilisis fermentum consectetur vitae, venenatis ac ligula. Pellentesque pharetra sellus ut eros ut diam vestibulum lobortis id eu nulla.
-				Curabitur congue, purus sed pulvinar pretium, dui est porta diam, vitae tempus leo quam quis libero. Vivamus vel varius ipsum. Morbi id tristique quam, vel dictum neque. Aliquam elementum vitae nisi ac abitur congue, purus sed pulvinar pretium, dui est porta diam, vitae tempus leo quam quis libero.
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis congue mauris, vitae tempor justo lobortis eget. Fusce ut mi vitae lectus elementum pellentesque vitae tristique dolor. Quisque lacinia nisi lacus, vel accumsan tortor interdum nec. Vestibulum quis scelerisque eros, commodo imperdiet lorem. Suspendisse cursfinibus vel mi. Pell ut, rutrum bibendum eros. Maecenas a mi at ipsum convallis facilisis.
-				Proin sit amet venenatis justo. Mauris non consectetur est. Duis est metus, facilisis fermentum consectetur vitae, venenatis ac ligula. Pellentesque pharetra sellus ut eros ut diam vestibulum lobortis id eu nulla.
-				Curabitur congue, purus sed pulvinar pretium, dui est porta diam, vitae tempus leo quam quis libero. Vivamus vel varius ipsum. Morbi id tristique quam, vel dictum neque. Aliquam elementum vitae nisi ac Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce facilisis congue mauris, vitae tempor justo lobortis eget. Fusce ut mi vitae lectus elementum pellentesque vitae tristique dolor. Quisque lacinia nisi lacus, vel accumsan tortor interdum nec. Vestibulum quis scelerisque eros, commodo imperdiet lorem. Suspendisse cursfinibus vel mi. Pell ut, rutrum bibendum eros. Maecenas a mi at ipsum convallis facilisis.
-				Proin sit amet venenatis justo. Mauris non consectetur est. Duis est metus, facilisis fermentum consectetur vitae, venenatis ac ligula. Pellentesque pharetra sellus ut eros ut diam vestibulum lobortis id eu nulla.
-				Curabitur congue, purus sed pulvinar pretium, dui est porta diam, vitae tempus leo quam quis libero. Vivamus vel varius ipsum. Morbi id tristique quam, vel dictum neque. Aliquam elementum vitae nisi ac abitur congue, purus sed pulvinar pretium, dui est porta diam, vitae tempus leo quam quis libero.
+				Ата және жол ұғымдарының қосарлана аталуынан-ақ түсінікті. Ата –бабаларымыздың меңгерген ғылымы –
+				Ілім мен Білім ортасымен байланысты екені. Салт-дәстүрдің дінмен байланыса, қабаттаса құбылуынан
+				 болған дүние. Тылсым дүниемен, Аруақ ұғымымен тікелей байланысты.
+
+				Ата жолының бүгінгі мақсаты, үкімі – өзіңді таны, түбіңді таны, тегіңді таны, тарихыңды көтер дегені.
+				 Кімнен тудың, кім боласың, кім туады (қандай ұрпақ қалады) дегенді түсіндіреді. Ата жолының бүгінгі
+				 даму кезеңі – екінші отызжылдыққа қадам басуы. Бірінші отызжылдықта біздер зиярат етуді, тазарыну жолдарын,
+				 әдептерін үйрендік. Қаншама халық тазарынды, әруақтарын көтерді, қасиет көздері ашылды.
+
+				Ал екінші отызжылдықта біздер тақуалықты меңгеру, ғылымын (ілім мен білім ортасын) меңгеру, Ұлы бабалар
+				кітаптарына жалғану арқылы бойдағы, текте тұрған қасиеттерді меңгеру шарты болмақ. Сонымен қатар, бойдағы
+				қаралыққа қарсы тұру арқылы жетені қалыптастырып, сананы ашу. Бұл амалдың бәрі өз әруақтарың арқылы жүзеге
+				асады, олардың тылсымдағы жағдайы, олардың басын көтеруі маңызды болмақ.
 			</p>
 			<div class="history__pict"><img src="images/content/shanyrak.jpg" alt="shanyrak" width="403px" height="607px"></div>
 		</div>
@@ -464,76 +471,5 @@
 
 
 <script src="main.min.js"></script>
-<script>
-	let popup = document.getElementsByClassName('popup-block') //это поп-ап
-	let popup_name = document.getElementsByClassName('popup-block__name')//наименование поп-ап
-	let popup_close = document.getElementsByClassName('popup-block__close')//кнопка закрыть
-	let popup_caption = document.getElementsByClassName('popup-block__caption')//заголовок поп-ап
-	let popup_content = document.getElementsByClassName('popup-block__content')// это содержимое поп-ап
-
-	function closePopup(){
-		if (popup[0].style.display == 'flex'){
-			if (popup_caption[0].style.display == 'flex'){
-				popup_caption[0].classList.remove('popup-block__caption-yellow');
-				popup_caption[0].classList.remove('popup-block__caption-blue');
-				popup_caption[0].style.display='none'
-			}
-			popup_content[0].classList.remove('scrolled');
-			popup_content[0].classList.remove('popup-block__content-yellow');
-			popup_content[0].classList.remove('popup-block__content-blue');
-			popup_content[0].style.padding='20px'
-
-			popup_close[0].classList.remove('popup-block__close-white');
-			popup_close[0].classList.remove('popup-block__close-blue');
-			popup[0].style.display = 'none'
-		}
-	}
-
-	function showFeedBack(){
-		let feedback = document.getElementsByClassName('feedback-block') // это обратная связь
-		popup_name[0].innerHTML = "Кері байланыс";
-		popup_content[0].innerHTML=feedback[0].innerHTML
-
-		popup_caption[0].classList.add('popup-block__caption-blue');
-		popup_close[0].classList.add('popup-block__close-white');
-
-		popup_content[0].style.padding='0'
-		popup_caption[0].style.display='flex';
-		popup[0].style.display='flex'
-	}
-
-	function showCond(){
-		let cond = document.getElementsByClassName('footer-cond'); // это условия использования сайта
-		popup_name[0].innerHTML= "Условия";
-		popup_content[0].innerHTML="<div class='footer-cond' style='display:flex;'>"+cond[0].innerHTML+"</div>";
-
-		popup_content[0].classList.add('popup-block__content-blue');
-		popup_content[0].classList.add('scrolled');
-		popup_caption[0].classList.add('popup-block__caption-blue');
-		popup_close[0].classList.add('popup-block__close-white');
-
-		popup_content[0].style.display='-webkit-box'
-		popup_caption[0].style.display='flex';
-		popup[0].style.display='flex';
-	}
-
-	function showBooks(){
-		let books = document.getElementsByClassName('books-menu-wrap'); // это условия использования сайта
-		popup_name[0].innerHTML = "Кітаптар";
-		popup_content[0].innerHTML="<div class='books-menu-wrap' style='display:flex'>"+books[0].innerHTML+"</div>";
-
-		popup_content[0].classList.add('popup-block__content-yellow');
-		popup_content[0].classList.add('scrolled');
-		popup_caption[0].classList.add('popup-block__caption-yellow');
-		popup_close[0].classList.add('popup-block__close-blue');
-
-		popup_content[0].style.display='-webkit-box'
-		popup_caption[0].style.display='flex';
-		popup[0].style.display='flex';
-
-		console.log("popup_content[0] >>> "+ popup_content[0].innerHTML);
-		console.log("books[0].innerHTML = "+ books[0].innerHTML);
-	}
-</script>
 </body>
 </html>

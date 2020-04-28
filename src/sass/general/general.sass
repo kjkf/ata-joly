@@ -96,8 +96,9 @@ h2
 		width: 30px
 		height: 30px
 		border-radius: 50%
-		//background-color: green
 		margin-right: 20px
+		+laptop-down
+			margin-right: 8px
 		&:last-child
 			margin-right: 0px
 		a
@@ -133,54 +134,98 @@ h2
 
 .search
 	display: flex
+	flex-direction: row
+	justify-content: center
 	width: $width_search
-	position: relative
-	&:before
-		content: ''
-		position: absolute
-		top: calc( (#{$height_search} - #{$height_search_ic}) / 2)
-		left: $left_search_ic
+	height: $height_search
+	background-color: $blue-dark
+	border: 2px solid #FFFFFF
+	border-radius: 8px
+	width: $width_search
+	align-items: center
+	&__btn
+		display: flex
+		background-color: inherit
+		border-style: none
 		width: $width_search_ic
 		height: $height_search_ic
-		background:
-			color: transparent
-			image: url("../images/icons/icon_search.svg")
-			repeat: no-repeat
-			size: contain
-		+large-down
-			top: calc( (#{$height_search_lapt} - #{$height_search_ic}) / 2)
-			left: 3px
-		+laptop-down
-			width: $width_search_ic_mob
-			height: $height_search_ic_mob
-			top: calc( (#{$height_search_mob} - #{$height_search_ic_mob}) / 2)
-
-	+large-down
-		width: $width_search_lapt
-	+laptop-down
-		width: 145px
+		background-image: url("../images/icons/icon_search.svg")
+		background-repeat: no-repeat
+		background-size: $width_search_ic $height_search_ic
+		background-position: center center
+		margin: 3px
 	&__field
-		width: 100%
-		min-height: $height_search
-		border-radius: 10px
-		border: 0px
-		background-color: #FFFFFF
+		display: flex
+		width: calc(100% - 34px)
+		height: calc( 100% - 2px)
+		border-style: none
+		border-top-left-radius: 5px
+		border-bottom-left-radius: 5px
 		font-size: 24px
 		font-family: $font_KZPFDinTextCompProRegular
-		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 30px)
-		+large-down
-			font-size: 0.5rem
-			min-height: $height_search_lapt
-			border-radius: 5px
-		+laptop-down
-			min-height: $height_search_mob
-			padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 15px)
-			border-radius: 8px
-
-
-
+		padding-left: 5px
+		margin: 2px
 		+placeholder
+			text-align: center
 			color: $grey1
+		+laptop-down
+			font-size: 20px
+			border-top-left-radius: 0px
+			border-bottom-left-radius: 0px
+			border-top-right-radius: 5px
+			border-bottom-right-radius: 5px
+	+laptop-down
+		width: calc(100% - 40px)
+		flex-direction: row-reverse
+
+.search.closed
+	width: $width_search_closed
+	background-position: center center
+	.search__field
+		display: none
+
+	//position: relative
+	// &:before
+	// 	content: ''
+	// 	position: absolute
+	// 	top: calc( (#{$height_search} - #{$height_search_ic}) / 2)
+	// 	left: $left_search_ic
+	// 	width: $width_search_ic
+	// 	height: $height_search_ic
+	// 	background:
+	// 		color: transparent
+	// 		image: url("../images/icons/icon_search.svg")
+	// 		repeat: no-repeat
+	// 		size: contain
+	// 	+large-down
+	// 		top: calc( (#{$height_search_lapt} - #{$height_search_ic}) / 2)
+	// 		left: 3px
+	// 	+laptop-down
+	// 		width: $width_search_ic_mob
+	// 		height: $height_search_ic_mob
+	// 		top: calc( (#{$height_search_mob} - #{$height_search_ic_mob}) / 2)
+	// +large-down
+	// 	width: $width_search_lapt
+	// +laptop-down
+	// 	width: 145px
+	// &__field
+	// 	width: 100%
+	// 	min-height: $height_search
+	// 	border-radius: 10px
+	// 	border: 0px
+	// 	background-color: #FFFFFF
+	// 	font-size: 24px
+	// 	font-family: $font_KZPFDinTextCompProRegular
+	// 	padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 30px)
+	// 	+large-down
+	// 		font-size: 0.5rem
+	// 		min-height: $height_search_lapt
+	// 		border-radius: 5px
+	// 	+laptop-down
+	// 		min-height: $height_search_mob
+	// 		padding: 0px $left_search_ic 0px calc(#{$left_search_ic}*2 + 15px)
+	// 		border-radius: 8px
+
 
 .lang-menu
 	display: flex
@@ -202,10 +247,8 @@ h2
 		width: $width_lang_item
 		min-height: $height_lang_item
 		border-right: 0.3px solid $borderColor_lang
-
 		+laptop-down
 			width: 36px
-
 		&:last-child
 			margin-right: 0px
 			border-right: 0px

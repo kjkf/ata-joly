@@ -20,19 +20,21 @@
     background-size: contain
     min-height: 497px
     min-height: calc(100vh - #{$header_mob_h})
-    background-position: center calc(50% + 54px)
+    //background-position: center calc(50% + 54px)
+    background-position: center 50%
 
 
   .container
     padding-top: 60px
     margin-top: -120px
     //background-color: rgba(0,0,0,0.5)
-
     +large-down
       //min-height: 784px
       padding-top: 248px
     +laptop-down
-      padding-top: calc(195px - 120px)
+      //padding-top: calc(195px - 120px)
+      //padding-top: 195px
+      padding: 0
       margin-top: 0px
       //min-height: 437px
 

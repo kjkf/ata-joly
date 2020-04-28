@@ -5,17 +5,28 @@
     const btnGumburg = document.querySelector('.btn-gamburg');
     const headerMobile = document.querySelector('.header-mob');
     const footer = document.getElementById('footer');
+    //bota added
+    const search_btn = document.querySelector('.search__btn');
+    const search = document.querySelector('.search');
 
     if (window.innerWidth < 1024) {
         const headerMobileContainer = document.querySelector('.header-mob .container');
+        //bota added
+        headerMobileContainer.append(search);
+        //---
         headerMobileContainer.append(langMenu);
         headerMobileContainer.append(socialMenu);
+
     }
 
     langMenu.addEventListener('click', e => {
         e.preventDefault();
         if (langMenu.classList.contains('selected')) {
             langMenu.classList.remove('selected');
+            //bota added
+            socialMenu.style.display='none'
+            search.style.display='none'
+            //----
         } else {
             let current = e.target.closest('li');
             if (current) {
@@ -24,16 +35,48 @@
                 current.classList.add('active');
             }
             langMenu.classList.add('selected');
+            //bota added
+            socialMenu.style.display='flex'
+            search.style.display='flex'
+            //----
         }
 
     });
+    //--bota added
+    search_btn.addEventListener('click', e => {
+      e.preventDefault();
+      if (search.classList.contains('closed')) {
+          search.classList.remove('closed');
+          socialMenu.style.display='none'
+          langMenu.style.display='none'
+      } else {
+          search.classList.add('closed');
+          socialMenu.style.display='flex'
+          langMenu.style.display='flex'
+      }
+
+    })
+
+    //---
 
     btnGumburg.addEventListener('click', e => {
         headerNav.classList.add('active');
         const btnClose = document.querySelector('#btn_close');
-
+        //--Bota added
+        if (window.innerWidth < 1024){
+          const headerMobileContainer = document.querySelector('.header-mob');
+          headerMobileContainer.style.display='none'
+        }
+        //------------
         btnClose.addEventListener('click', e => {
             headerNav.classList.remove('active');
+
+            //--Bota added
+            if (window.innerWidth < 1024){
+              const headerMobileContainer = document.querySelector('.header-mob');
+              headerMobileContainer.style.display='flex'
+            }
+            //------------
         });
 
     });

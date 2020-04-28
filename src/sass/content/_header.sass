@@ -4,7 +4,6 @@
   top: 0px
   width: 100%
   z-index: 1
-
   .container
     max-width: 100%
     flex-direction: row
@@ -38,32 +37,25 @@
       display: none
 
   .search
-    position: absolute
-    left: 50%
-    margin-left: calc(-#{$width_search} / 2)
-    +large-down
-      margin-left: calc(-#{$width_search_lapt} / 2)
+    margin-left: auto
+    align-self: center
     +laptop-down
-      margin-left: calc(-145px / 2 + 17px)
+      display: none
 
   .lang-menu
-    margin-left: auto
+    //margin-left: auto
+    margin-left: 10px
     align-self: center
     background-color: $blue-dark
     +laptop-down
       display: none
 
-
-
-
 .menu-wrap
-  display: flex
+  display: none
   justify-content: flex-start
   flex-direction: column
-  //opacity: 0
-  display: none
   position: absolute
-  top: -30px
+  top: -21px
   right: -$header_cont_pl
   background-color: $blue-dark
   border-bottom-left-radius: 15px
@@ -71,10 +63,14 @@
   +large-down
     right: -$header_cont_pl_laptop
   +laptop-down
+    padding: 0 0 10px 0
+    margin: 0
+    left: 0px
     border-radius: 15px
-    right: calc(-#{$header_cont_pl_mobile} + 5px/2)
+    right: 3px
     align-items: center
-    padding: 10px 12px 28px
+    justify-content: flex-start
+    align-self: center
 
 .menu, .menu-sub
   display: flex
@@ -88,7 +84,6 @@
     margin: 0px
     align-items: center
     width: 100%
-
   &__item
     margin-bottom: 5px
     +laptop-down
@@ -110,15 +105,16 @@
   color: #FFFFFF
   font-size: $fontSize_menu
   line-height: $lineHeight_menu
-
   &:hover, &:active
     text-decoration: none
-    //box-shadow: $shadow_text
     text-shadow: $shadow_text
-
   +laptop-down
     font-size: $fontSize_menu_mob
     line-height: $lineHeight_menu_mob
+
+.selected_link
+  text-decoration: none
+  text-shadow: $shadow_text
 
 .menu-sub__item
   margin-left: 20px
@@ -131,6 +127,9 @@
   font-size: $fontSize_menusub
   line-height: $lineHeight_menusub
   position: relative
+  &:hover, &:active
+    text-decoration: none
+    text-shadow: $shadow_text
 
   &:before
     content: ''
@@ -197,22 +196,28 @@
       align-self: center
 
 .header__nav
+  display: flex
+  flex-direction: row
+  align-self: center
   position: relative
   margin-left: 20px
   +large-down
     margin-left: 14px
+    width: auto
+    justify-content: flex-end
   +laptop-down
+    width: 100%
     margin-left: auto
-
   .menu-wrap
     min-width: 400px
     z-index: 1
     +laptop-down
-      min-width: 315px
+      min-width: 295px
+      max-width: 100%
   .first-menu
     border-bottom: 0.3px solid rgba(255, 255, 255, 0.5)
     +laptop-down
-      padding-bottom: 35px
+      padding-bottom: 15px
 
   &.active
     .menu-wrap
@@ -234,12 +239,15 @@
 
   .container
     flex-direction: row
-    justify-content: flex-start
+    justify-content: center
     padding: 0px 40px
     position: relative
-  .social-menu, .lang-menu
+  .social-menu, .lang-menu, .search
     align-self: center
+  .search
+    position: absolute
+    left: 20px
   .lang-menu
     position: absolute
-    right: 40px
+    right: 20px
     background-color: $blue-dark
