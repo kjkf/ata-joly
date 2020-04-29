@@ -8,16 +8,18 @@
   transition: all 200ms ease-out
   cursor: pointer
   width: 660px
-  height: 416px
+  min-height: 416px
   +extra_large-down
     width: 497px
-    height: 400px
+    min-height: 400px
   +large-down
     width: 370px
-    height: 230px
+    min-height: 230px
   +laptop-down
-    width: 300px
-    height: 186px
+    width: calc(100% - 20px)
+    min-height: 270px
+    // height: auto
+    // min-height: 186px
 
   &:hover .play
     background-position: 0 0
@@ -39,13 +41,15 @@
 
 .youtube-frame
   width: 660px
-  height: 416px
+  min-height: 416px
   +extra_large-down
     width: 497px
-    height: 400px
+    min-height: 400px
   +large-down
     width: 370px
     height: 230px
   +laptop-down
-    width: 300px
-    height: 186px
+    width: calc(100% - 20px)
+    min-height: 270px
+    // width: 300px
+    // height: 186px
