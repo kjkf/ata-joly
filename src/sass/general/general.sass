@@ -83,6 +83,23 @@ h2
 		padding-right: 5px
 		//background: green
 
+.loader-wrapper
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: white
+	display: none
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	color: $blue-dark
+	z-index: 1
+	.loader-img
+		width: 100px
+		height: 100px
+
 .social-menu
 	display: flex
 	flex-direction: row
@@ -163,11 +180,14 @@ h2
 		border-bottom-left-radius: 5px
 		font-size: 24px
 		font-family: $font_KZPFDinTextCompProRegular
+		padding: 0
 		padding-left: 5px
 		margin: 2px
 		+placeholder
 			text-align: center
 			color: $grey1
+		+large-down
+			font-size: 24px
 		+laptop-down
 			font-size: 20px
 			border-top-left-radius: 0px

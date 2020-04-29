@@ -3,6 +3,7 @@ let popup_name = document.getElementsByClassName('popup-block__name')//наим�
 let popup_close = document.getElementsByClassName('popup-block__close')//кнопка закрыть
 let popup_caption = document.getElementsByClassName('popup-block__caption')//заголовок поп-ап
 let popup_content = document.getElementsByClassName('popup-block__content')// это содержимое поп-ап
+let b = document.getElementsByTagName("BODY")[0];//body
 
 function closePopup(){
   if (popup[0].style.display == 'flex'){
@@ -19,6 +20,8 @@ function closePopup(){
     popup_close[0].classList.remove('popup-block__close-white');
     popup_close[0].classList.remove('popup-block__close-blue');
     popup[0].style.display = 'none'
+
+    b.style.overflow='auto';
   }
 }
 
@@ -33,6 +36,8 @@ function showFeedBack(){
   popup_content[0].style.padding='0'
   popup_caption[0].style.display='flex';
   popup[0].style.display='flex'
+
+  b.style.overflow='hidden';
 }
 
 function showCond(){
@@ -48,6 +53,9 @@ function showCond(){
   popup_content[0].style.display='-webkit-box'
   popup_caption[0].style.display='flex';
   popup[0].style.display='flex';
+
+  b.style.overflow='hidden';
+
 }
 
 function showBooks(){
@@ -63,4 +71,6 @@ function showBooks(){
   popup_content[0].style.display='-webkit-box'
   popup_caption[0].style.display='flex';
   popup[0].style.display='flex';
+
+  b.style.overflow='hidden';
 }

@@ -11,6 +11,10 @@
 
 </head>
 <body>
+<div class="loader-wrapper">
+	<img class='loader-img' src="images/icons/loader.svg" alt="loader"/>
+	<span class='loader-txt'>Пожалуйста, подождите</span>
+</div>
 <div class="header bg--blue">
 	<div class="container">
 		<div class="logo"><a href="#"></a></div>
@@ -20,9 +24,6 @@
 			<li class="social-menu__item"><a href="#" class="icn icn__tw"></a></li>
 			<li class="social-menu__item"><a href="#" class="icn icn__fb"></a></li>
 		</ul>
-		<!-- <label class="search">
-			<input type="text" class="search__field" placeholder="Поиск">
-		</label> -->
 		<div class="search closed">
 			<input type="text" class="search__field" placeholder="Поиск">
 			<button class="search__btn" type="button" name="button"></button>
@@ -467,7 +468,25 @@
 
 	</div>
 </div>
+<script type="text/javascript">
+	const loader = document.querySelector('.loader-wrapper');
+	const header = document.querySelector('.header');
+	const headerMobile = document.querySelector('.header-mob');
 
+	document.onreadystatechange = function(){
+		if (document.readyState == 'interactive'){
+			loader.style.display='flex';
+			header.style.display = 'none';
+			if (window.innerWidth < 1024) headerMobile.style.display = 'none';
+		}
+		else {
+			loader.style.display='none';
+			header.style.display = 'flex';
+			if (window.innerWidth < 1024) headerMobile.style.display = 'flex';
+		}
+	}
+
+</script>
 
 
 <script src="main.min.js"></script>
