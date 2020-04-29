@@ -24,8 +24,9 @@
         if (langMenu.classList.contains('selected')) {
             langMenu.classList.remove('selected');
             //bota added
-            socialMenu.style.display='none'
-            search.style.display='none'
+            if (window.innerWidth < 1024){
+            socialMenu.style.display='none';
+            search.style.display='none';}
             //----
         } else {
             let current = e.target.closest('li');
@@ -36,8 +37,9 @@
             }
             langMenu.classList.add('selected');
             //bota added
-            socialMenu.style.display='flex'
-            search.style.display='flex'
+            if (window.innerWidth < 1024){
+            socialMenu.style.display='flex';
+            search.style.display='flex';}
             //----
         }
 
@@ -47,12 +49,14 @@
       e.preventDefault();
       if (search.classList.contains('closed')) {
           search.classList.remove('closed');
-          socialMenu.style.display='none'
-          langMenu.style.display='none'
+          if (window.innerWidth < 1024){
+          socialMenu.style.display='none';
+          langMenu.style.display='none';}
       } else {
           search.classList.add('closed');
-          socialMenu.style.display='flex'
-          langMenu.style.display='flex'
+          if (window.innerWidth < 1024){
+          socialMenu.style.display='flex';
+          langMenu.style.display='flex';}
       }
 
     })
