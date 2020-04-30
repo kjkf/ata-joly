@@ -11,11 +11,7 @@ for(let i=0; i<menu_links_out.length; i++) {
 
 function menuLinkClick(event) {
   removeActive();
-  let classes = event.currentTarget.getAttribute("class")+' selected_link';
-  event.currentTarget.setAttribute('class', classes)
-
-  console.log("event.currentTarget. >>> " + event.currentTarget.parentNode.getAttribute('class'))
-
+  event.currentTarget.classList.add('selected_link');
   smoothScroll(event);
 }
 
@@ -29,7 +25,7 @@ function removeActive(){
 function menuBarClose(){
   //close menu
   const headerNav = document.querySelector('.header__nav');
-  headerNav.classList.remove('active');
+  if (headerNav.classList.contains('active')){headerNav.classList.remove('active');}
   //----
 }
 
