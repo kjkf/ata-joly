@@ -1,21 +1,19 @@
-const navbarLinks = document.querySelectorAll(".smooth_scroll");
+const menu_links = document.querySelectorAll(".smooth_scroll");
+const menu_links_out = document.querySelectorAll(".menu__link");
 
-for(let i=0; i<navbarLinks.length; i++) {
-  navbarLinks[i].addEventListener("click", navbarLinkClick);
+for(let i=0; i<menu_links.length; i++) {
+  menu_links[i].addEventListener("click", menuLinkClick);
 }
 
-function navbarLinkClick(event) {
+for(let i=0; i<menu_links_out.length; i++) {
+  menu_links_out[i].addEventListener("click", menuBarClose);
+}
+
+function menuLinkClick(event) {
   removeActive();
   let classes = event.currentTarget.getAttribute("class")+' selected_link';
   event.currentTarget.setAttribute('class', classes)
-  //
-  // let child = event.currentTarget.parentNode.getAttribute('class');
-  // if (child == 'menu-sub__item'){
-  //   let parent = event.currentTarget.parentNode.closest('menu__link');
-  //   console.log("parent >>> " + parent)
-  // }
 
-  //parent.classList.add('selected');
   console.log("event.currentTarget. >>> " + event.currentTarget.parentNode.getAttribute('class'))
 
   smoothScroll(event);
@@ -28,6 +26,13 @@ function removeActive(){
   })
 }
 
+function menuBarClose(){
+  //close menu
+  const headerNav = document.querySelector('.header__nav');
+  headerNav.classList.remove('active');
+  //----
+}
+
 function smoothScroll(event) {
   event.preventDefault();
   const targetId = event.currentTarget.getAttribute("href")==="#" ? "header" : event.currentTarget.getAttribute("href");
@@ -37,28 +42,29 @@ function smoothScroll(event) {
   const duration = 1500;
   let start = null;
 
+  menuBarClose();
+
   window.requestAnimationFrame(step);
 
   function step(timestamp) {
     if (!start) start = timestamp;
     const progress = timestamp - start;
-    // window.scrollTo(0, distance*(progress/duration) + startPosition);
     window.scrollTo(0, easeInOutCubic(progress, startPosition, distance, duration));
     if (progress < duration) window.requestAnimationFrame(step);
   }
 }
 
 // Easing Functions
-function linear(t, b, c, d) {
-	return c*t/d + b;
-};
-
-function easeInOutQuad(t, b, c, d) {
-	t /= d/2;
-	if (t < 1) return c/2*t*t + b;
-	t--;
-	return -c/2 * (t*(t-2) - 1) + b;
-};
+// function linear(t, b, c, d) {
+// 	return c*t/d + b;
+// };
+//
+// function easeInOutQuad(t, b, c, d) {
+// 	t /= d/2;
+// 	if (t < 1) return c/2*t*t + b;
+// 	t--;
+// 	return -c/2 * (t*(t-2) - 1) + b;
+// };
 
 function easeInOutCubic(t, b, c, d) {
 	t /= d/2;

@@ -5,6 +5,20 @@ let popup_caption = document.getElementsByClassName('popup-block__caption')//з�
 let popup_content = document.getElementsByClassName('popup-block__content')// это содержимое поп-ап
 let b = document.getElementsByTagName("BODY")[0];//body
 
+function bodyScrollLock(){
+  const width = document.body.clientWidth;
+  const topy = `-${window.scrollY}px`
+  b.style.position = 'fixed';
+  b.style.top = topy;
+  b.style.width = width + "px";//присваиваю ширину боди изначальную, т.к. после позишн фиксд меняется ширина боди
+}
+function bodyScrollUnlock(){
+  b.style.overflow='auto';
+  const scrollY = b.style.top;
+  b.style.position = '';
+  b.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+}
 function closePopup(){
   if (popup[0].style.display == 'flex'){
     if (popup_caption[0].style.display == 'flex'){
@@ -21,7 +35,7 @@ function closePopup(){
     popup_close[0].classList.remove('popup-block__close-blue');
     popup[0].style.display = 'none'
 
-    b.style.overflow='auto';
+    bodyScrollUnlock();
   }
 }
 
@@ -37,7 +51,7 @@ function showFeedBack(){
   popup_caption[0].style.display='flex';
   popup[0].style.display='flex'
 
-  b.style.overflow='hidden';
+  bodyScrollLock();
 }
 
 function showCond(){
@@ -54,8 +68,7 @@ function showCond(){
   popup_caption[0].style.display='flex';
   popup[0].style.display='flex';
 
-  b.style.overflow='hidden';
-
+  bodyScrollLock();
 }
 
 function showBooks(){
@@ -72,5 +85,5 @@ function showBooks(){
   popup_caption[0].style.display='flex';
   popup[0].style.display='flex';
 
-  b.style.overflow='hidden';
+  bodyScrollLock();
 }
